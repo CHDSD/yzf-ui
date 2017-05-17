@@ -7,30 +7,14 @@
 
 const Alert = (($) => {
 
-
-  /**
-   * ------------------------------------------------------------------------
-   * Constants
-   * ------------------------------------------------------------------------
-   */
-
   const NAME                = 'alert';
-  const DATA_KEY            = 'bs.alert';
-
-
-  /**
-   * ------------------------------------------------------------------------
-   * Class Definition
-   * ------------------------------------------------------------------------
-   */
+  const DATA_KEY            = 'yzf.alert';
 
   class Alert {
 
     constructor(element) {
       this._element = element
     }
-
-    // static
 
     static _jQueryInterface(config) {
       return this.each(function () {
@@ -43,6 +27,11 @@ const Alert = (($) => {
         }
 
       });
+    }
+
+    dispose() {
+      $.removeData(this._element, DATA_KEY)
+      this._element = null
     }
 
   }

@@ -1,0 +1,19 @@
+$btn-text-color: $text-color;
+$btn-bg-color: $main-color;
+$btn-bd-color: $main-color;
+
+.btn {
+	display: inline-block;
+	text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+
+  &:hover {
+  	text-decoration: none;
+  }
+}
+
+.btn-default {
+	@include button-variant($btn-text-color, $btn-bg-color, $btn-bd-color);
+}

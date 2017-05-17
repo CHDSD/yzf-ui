@@ -1,8 +1,8 @@
 {
   "name": "yzf-ui",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "云帐房通用UI库，带主题切换",
-  "main": "index.js",
+  "main": "./dist/js/yzf.js",
   "scripts": {
     "dev": "gulp js:watch sass:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/CHDSD/yzf-ui.git"
   },
-  "author": "",
+  "author": "https://github.com/CHDSD",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CHDSD/yzf-ui/issues"
