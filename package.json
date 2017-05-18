@@ -4,7 +4,7 @@
   "description": "云帐房通用UI库，带主题切换",
   "main": "./dist/js/yzf.js",
   "scripts": {
-    "dev": "gulp js:watch sass:watch",
+    "dev": "gulp js sass js:watch sass:watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
