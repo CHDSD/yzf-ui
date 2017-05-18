@@ -1,0 +1,23 @@
+$active-text-color:$text-color-blue;
+
+.breadcrumbs{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color:$active-text-color;
+    text-decoration: underline;
+  }
+  >li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: "/\00a0";
+  }
+  .active{
+    color:$active-text-color;
+  }
+}
