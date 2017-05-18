@@ -1,3 +1,4 @@
-/dist
+/dist/*
+!/dist/image
 /node_modules
 /npm-debug.*
