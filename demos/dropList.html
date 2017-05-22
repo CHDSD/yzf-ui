@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dropList</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+        #code {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <br/>
+    <span>下拉框：</span>
+    <div class="drop-list">
+        <div class="drop-tool">
+            <input class="input"/>
+            <span class="icon"></span>
+        </div>
+        <ul class="option-list">
+            <li>选项一</li>
+            <li>选项二</li>
+            <li>选项三</li>
+            <li>选项四</li>
+        </ul>
+    </div>
+</div>
+
+<p class="code-example">code:</p>
+<div>
+      <pre>
+        <code id="code" className="js"></code>
+      </pre>
+</div>
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<script>
+    var htmlStr = [
+        '下拉框：<div class="drop-list"></div>'
+    ].join('\n').replace(/\</g, '&lt;');
+    $('#code').html(htmlStr);
+    hljs.highlightBlock($('#code')[0]);
+    $('.input').click(function(){
+        $('.option-list').toggleClass('hidden');
+    });
+    $(".option-list li").click(function() {
+        var txt = $(this).text();
+        $(".drop-tool input").val(txt);
+        $('.option-list').toggleClass('hidden');
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+$drop-list-bg: #fff;
+*{
+  margin:0;
+  padding: 0;
+  input{
+    outline: none;
+  }
+}
+li{
+  list-style: none;
+}
+.drop-list{
+  display: inline-block;
+  position: relative;
+  .hidden{
+    display: none;
+  }
+  .drop-tool input{
+    height:34px;
+    width:500px;
+    padding-left: 28px;
+  }
+  .drop-tool span{
+    //background: ;
+  }
+  .option-list{
+    position: absolute;
+    width: 467px;
+    top:36px;
+    background:$drop-list-bg;
+    border: $border-color 1px solid;
+    padding: 2.5px 0;
+    li{
+      height:35px;
+      padding-left: 28px;
+      text-align: left;
+      overflow: hidden;
+      color:$font-color;
+    }
+    li:hover{
+      color: $font-color-bule;
+    }
+  }
+}
