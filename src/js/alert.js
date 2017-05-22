@@ -12,26 +12,64 @@ const Alert = (($) => {
 
   class Alert {
 
-    constructor(element) {
-      this._element = element
+    constructor(element, config) {
+      this._element = element;
+      this._config = config;
+    }
+
+    show() {
+      $(this._element).show();
+    }
+
+    config(config) {
+      this._config = $.extends({}, this._config, config);
+    }
+
+    hide() {
+      $(this._element).hide();
     }
 
     static _jQueryInterface(config) {
+      var args = Array.prototype.slice.call(arguments, 1);
+      var returnValue;
+
       return this.each(function () {
-        const $element = $(this)
-        let data       = $element.data(DATA_KEY)
+        const $element = $(this);
+        const _config = typeof config === 'object' ? config : null;
+        let data = $element.data(DATA_KEY);
 
         if (!data) {
-          data = new Alert(this)
-          $element.data(DATA_KEY, data)
+          data = new Alert(this, _config);
+          $element.data(DATA_KEY, data);
+        }
+
+        if (typeof config === 'string') {
+          if (data[config] === undefined) {
+            throw new Error(`No method named "${config}"`);
+          }
+          returnValue = data[config].apply(data, args);
+        }
+
+        if (returnValue !== undefined) {
+          return returnValue;
+        } else {
+          return this;
         }
 
       });
     }
 
+    static _dataApiClickHandler(e) {
+      var target = e.target;
+      var action = $(target).attr('data-action');
+      if (action == 'close') {
+        Alert._jQueryInterface.call($(this), 'hide');
+      }
+    }
+
     dispose() {
-      $.removeData(this._element, DATA_KEY)
-      this._element = null
+      $.removeData(this._element, DATA_KEY);
+      // this._element = null;
     }
 
   }
@@ -43,11 +81,15 @@ const Alert = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  // $(document).on(
-  //   Event.CLICK_DATA_API,
-  //   Selector.DISMISS,
-  //   Alert._handleDismiss(new Alert())
-  // )
+  $(document).on(
+    'click',
+    '.alert',
+    Alert._dataApiClickHandler
+    // function (e) {
+    //   console.log('data', $(this).data());
+    //   Alert._jQueryInterface.call($(this), 'hide');
+    // }
+  )
 
 
   /**

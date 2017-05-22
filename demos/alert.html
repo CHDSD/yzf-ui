@@ -8,14 +8,24 @@
   </head>
   <body>
 
-    <div>
-      <button class="btn btn-default">button-default</button>
+    <div style="margin: 10px;">
+      <button class="btn btn-default show-alert">show alert</button>
+    </div>
+
+    <div class="alert">
+      <div class="box">
+        <p class="alert-title">冻结提示</p>
+        <span class="yzf-icon yzf-icon-close" data-action="close"></span>
+        <div class="content">请确认是否继续冻结所选择的所有元素？</div>
+      </div>
     </div>
 
     <script src="./lib/jquery.min.js"></script>
     <script src="../dist/js/yzf.js"></script>
     <script>
-      $('.alert').alert();
+      $('.show-alert').on('click', function () {
+        $('.alert').alert('show');
+      });
     </script>
   </body>
 </html>
