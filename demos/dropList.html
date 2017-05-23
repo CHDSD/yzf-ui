@@ -42,17 +42,28 @@
 <script src="./lib/highlight.min.js"></script>
 <script>
     var htmlStr = [
-        '下拉框：<div class="drop-list"></div>'
+        '下拉框：<div class="drop-list">',
+            '           <div class="drop-tool">',
+            '               <input class="input"/>',
+            '               <span class="icon"></span>',
+        '               </div>',
+            '           <ul class="option-list">',
+            '               <li>选项一</li>',
+            '               <li>选项二</li>',
+            '               <li>选项三</li>',
+            '               <li>选项四</li>',
+            '           </ul>',
+        '       </div>'
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);
     $('.input').click(function(){
-        $('.option-list').toggleClass('hidden');
+        $('.option-list').toggleClass('show');
     });
     $(".option-list li").click(function() {
         var txt = $(this).text();
         $(".drop-tool input").val(txt);
-        $('.option-list').toggleClass('hidden');
+        $('.option-list').toggleClass('show');
     });
 </script>
 </body>
