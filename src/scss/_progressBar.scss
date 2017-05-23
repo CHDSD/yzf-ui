@@ -1,0 +1,30 @@
+.progress{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  font-size: .75rem;
+  line-height: 1rem;
+  text-align: center;
+  background-color: #eceeef;
+  border-radius: .25rem;
+  margin-top: 1rem;
+  .progress-bar {
+    height: 1rem;
+    color: #fff;
+    background-color: #0275d8;
+  }
+  .bg-success{
+    background-color: #5cb85c!important;
+  }
+  .bg-info{
+    background-color: #5bc0de!important;
+  }
+  .bg-warning{
+    background-color:#f0ad4e!important;
+  }
+  .bg-danger{
+    background-color: #d9534f!important
+  }
+}
