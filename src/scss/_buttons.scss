@@ -1,6 +1,6 @@
 $btn-text-color: $text-light-color;
 $btn-bg-color: $main-color;
-$btn-bd-color: $main-color;
+$btn-light-bg-color: lighten($btn-bg-color, 20%);
 
 .btn {
 	display: inline-block;
@@ -17,7 +17,7 @@ $btn-bd-color: $main-color;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-	cursor: default;
+	cursor: pointer;
 
   &:hover {
   	text-decoration: none;
@@ -29,5 +29,8 @@ $btn-bd-color: $main-color;
 }
 
 .btn-default {
-	@include button-variant($btn-text-color, $btn-bg-color, darken($btn-bd-color, 10%));
+	@include button-variant($btn-text-color, $btn-bg-color, darken($btn-bg-color, 10%));
+}
+.btn-light {
+	@include button-variant($btn-text-color, $btn-light-bg-color, darken($btn-light-bg-color, 10%));	
 }

@@ -10,21 +10,29 @@
       #code {
         background-color: #eee;
       }
+      .group {
+        margin: 10px 20px;
+      }
     </style>
   </head>
   <body>
 
-    <div>
+    <div class="group">
       <button class="btn btn-default">button-default</button>
       <input type="button" class="btn btn-default" value="button-default">
       <span class="btn btn-default">button-default</span>
       <a class="btn btn-default">button-default</a>
+      <br><br>
+      <button class="btn btn-light">button-light</button>
+      <input type="button" class="btn btn-light" value="button-light">
+      <span class="btn btn-light">button-light</span>
+      <a class="btn btn-light">button-light</a>
     </div>
 
     <p class="code-example">code:</p>
     <div>
       <pre>
-        <code id="code" className="js"></code>
+        <code id="code" class="html"></code>
       </pre>
     </div>
 
@@ -36,7 +44,12 @@
         '<button class="btn btn-default">button-default</button>',
         '<input type="button" class="btn btn-default" value="button-default">',
         '<span class="btn btn-default">button-default</span>',
-        '<a class="btn btn-default">button-default</a>'
+        '<a class="btn btn-default">button-default</a>',
+        '<br><br>',
+        '<button class="btn btn-light">button-light</button>',
+        '<input type="button" class="btn btn-light" value="button-light">',
+        '<span class="btn btn-light">button-light</span>',
+        '<a class="btn btn-light">button-light</a>'
       ].join('\n').replace(/\</g, '&lt;');
       $('#code').html(htmlStr);
       hljs.highlightBlock($('#code')[0]);

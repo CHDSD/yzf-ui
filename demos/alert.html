@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Alert</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+    </style>
   </head>
   <body>
 
@@ -15,17 +21,45 @@
     <div class="alert">
       <div class="box">
         <p class="alert-title">冻结提示</p>
-        <span class="yzf-icon yzf-icon-close" data-action="close"></span>
+        <span class="yzf-icon yzf-icon-close alert-close"></span>
         <div class="content">请确认是否继续冻结所选择的所有元素？</div>
+        <div class="btns">
+          <button class="btn btn-light alert-cancel">取消</button>
+          <button class="btn btn-default alert-ok">确定</button>
+        </div>
       </div>
     </div>
 
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
     <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
     <script src="../dist/js/yzf.js"></script>
     <script>
       $('.show-alert').on('click', function () {
         $('.alert').alert('show');
       });
+
+      var htmlStr = [
+        '<div class="alert">',
+        '  <div class="box">',
+        '    <p class="alert-title">冻结提示</p>',
+        '    <span class="yzf-icon yzf-icon-close alert-close"></span>',
+        '    <div class="content">请确认是否继续冻结所选择的所有元素？</div>',
+        '    <div class="btns">',
+        '      <button class="btn btn-light alert-cancel">取消</button>',
+        '      <button class="btn btn-default alert-ok">确定</button>',
+        '    </div>',
+        '  </div>',
+        '</div>',
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
     </script>
   </body>
 </html>

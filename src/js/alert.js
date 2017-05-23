@@ -14,7 +14,7 @@ const Alert = (($) => {
 
     constructor(element, config) {
       this._element = element;
-      this._config = config;
+      this._config = config || {};
     }
 
     show() {
@@ -29,17 +29,27 @@ const Alert = (($) => {
       $(this._element).hide();
     }
 
+    ok() {
+      this.hide();
+      this._config['succ'] && this._config['succ']();
+    }
+
+    cancel() {
+      this.hide();
+      this._config['fail'] && this._config['fail']();
+    }
+
     static _jQueryInterface(config) {
       var args = Array.prototype.slice.call(arguments, 1);
       var returnValue;
 
       return this.each(function () {
-        const $element = $(this);
+        const $element = $(this).hasClass("alert") ? $(this) : $(this).parents(".alert");
         const _config = typeof config === 'object' ? config : null;
         let data = $element.data(DATA_KEY);
 
         if (!data) {
-          data = new Alert(this, _config);
+          data = new Alert($element[0], _config);
           $element.data(DATA_KEY, data);
         }
 
@@ -64,6 +74,8 @@ const Alert = (($) => {
       var action = $(target).attr('data-action');
       if (action == 'close') {
         Alert._jQueryInterface.call($(this), 'hide');
+      } else if (action == 'show') {
+        Alert._jQueryInterface.call($(this), 'show');
       }
     }
 
@@ -83,13 +95,27 @@ const Alert = (($) => {
 
   $(document).on(
     'click',
-    '.alert',
-    Alert._dataApiClickHandler
-    // function (e) {
-    //   console.log('data', $(this).data());
-    //   Alert._jQueryInterface.call($(this), 'hide');
-    // }
-  )
+    '.alert .alert-close',
+    function (e) {
+      Alert._jQueryInterface.call($(this), 'hide');
+    }
+  );
+
+  $(document).on(
+    'click',
+    '.alert .alert-ok',
+    function (e) {
+      Alert._jQueryInterface.call($(this), 'ok');
+    }
+  );
+
+  $(document).on(
+    'click',
+    '.alert .alert-cancel',
+    function (e) {
+      Alert._jQueryInterface.call($(this), 'cancel');
+    }
+  );
 
 
   /**
