@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Button</title>
+    <title>Button Group</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
     <style>
@@ -18,20 +18,26 @@
   <body>
 
     <div class="group">
-      <button class="btn btn-default">button-default</button>
-      <input type="button" class="btn btn-default" value="button-default">
-      <span class="btn btn-default">button-default</span>
-      <a class="btn btn-default">button-default</a>
+      <div class="btn-group">
+        <button class="btn btn-default">button-default</button>
+        <input type="button" class="btn btn-default" value="button-default">
+        <span class="btn btn-default">button-default</span>
+        <a class="btn btn-default">button-default</a>  
+      </div>
+      <br><br>      
+      <div class="btn-group">
+        <button class="btn btn-light">button-light</button>
+        <input type="button" class="btn btn-light" value="button-light">
+        <span class="btn btn-light">button-light</span>
+        <a class="btn btn-light">button-light</a>
+      </div>
       <br><br>
-      <button class="btn btn-light">button-light</button>
-      <input type="button" class="btn btn-light" value="button-light">
-      <span class="btn btn-light">button-light</span>
-      <a class="btn btn-light">button-light</a>
-      <br><br>
-      <button class="btn btn-pure">button-pure</button>
-      <input type="button" class="btn btn-pure" value="button-pure">
-      <span class="btn btn-pure">button-pure</span>
-      <a class="btn btn-pure">button-pure</a>
+      <div class="btn-group">
+        <button class="btn btn-pure">button-pure</button>
+        <input type="button" class="btn btn-pure" value="button-pure">
+        <span class="btn btn-pure">button-pure</span>
+        <a class="btn btn-pure">button-pure</a>
+      </div>
     </div>
 
     <p class="code-example">code:</p>
@@ -46,20 +52,26 @@
     <script src="../dist/js/yzf.js"></script>
     <script>
       var htmlStr = [
+        '<div className="btn-group">',
         '<button class="btn btn-default">button-default</button>',
         '<input type="button" class="btn btn-default" value="button-default">',
         '<span class="btn btn-default">button-default</span>',
         '<a class="btn btn-default">button-default</a>',
+        '</div>',
         '<br><br>',
+        '<div className="btn-group">',
         '<button class="btn btn-light">button-light</button>',
         '<input type="button" class="btn btn-light" value="button-light">',
         '<span class="btn btn-light">button-light</span>',
         '<a class="btn btn-light">button-light</a>',
+        '</div>',
         '<br><br>',
+        '<div className="btn-group">',
         '<button class="btn btn-pure">button-pure</button>',
         '<input type="button" class="btn btn-pure" value="button-pure">',
         '<span class="btn btn-pure">button-pure</span>',
-        '<a class="btn btn-pure">button-pure</a>'
+        '<a class="btn btn-pure">button-pure</a>',
+        '</div>'
       ].join('\n').replace(/\</g, '&lt;');
       $('#code').html(htmlStr);
       hljs.highlightBlock($('#code')[0]);

@@ -34,3 +34,30 @@ $btn-light-bg-color: lighten($btn-bg-color, 20%);
 .btn-light {
 	@include button-variant($btn-text-color, $btn-light-bg-color, darken($btn-light-bg-color, 10%));	
 }
+.btn-pure {
+	border: solid 1px #fff;
+	@include button-variant($text-color, #fff, darken(#f1f1f1, 10%));
+}
+
+.btn-group {
+	overflow: hidden;
+	display: inline-block;
+	background: #ddd;
+	padding: 1px 1px 1px 1px;
+	border-radius: 3px;
+	> .btn {
+		float: left;
+		margin-left: 1px;
+		border-radius: 0;
+		&:first-child {
+			margin-left: 0;
+			border-radius: 3px 0 0 3px;
+		}
+		&:last-child {
+			border-radius: 0 3px 3px 0;
+		}
+	}
+	> .btn-pure {
+		border: none;
+	}
+}
