@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>list-group</title>
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+  </head>
+  <body>
+    <div class="-list-group">
+        <div class="header ">
+            <span class="img title"></span>
+            <span class="title span1">列表组头 <span style="color:#3F99F5"></span></span>
+        </div>
+        <div style="display: block;" id="panel" class="panel">
+           <div class="list-group-item">列表项一</div>
+           <div class="list-group-item">列表项二</div>
+           <div class="list-group-item">列表项三</div>
+           <div class="list-group-item">列表项四</div>
+           <div class="list-group-item">列表项五</div>
+        </div>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript">
+      $(document).ready(function(){
+        $(".header").click(function(){
+            $("#panel").slideToggle();
+            $(".img").toggleClass("active"); 
+        });
+    });
+    </script>
+    
+  </body>
+</html>
