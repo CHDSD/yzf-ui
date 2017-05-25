@@ -1,16 +1,16 @@
 /**
  * --------------------------------------------------------------------------
- * yzf-ui (v4.0.0-alpha.6): alert.js
+ * yzf-ui (v4.0.0-alpha.6): editBox.js
  * Licensed under MIT (https://github.com/CHDSD/yzf-ui)
  * --------------------------------------------------------------------------
  */
 
-const Alert = (($) => {
+const EditBox = (($) => {
 
-  const NAME                = 'alert';
-  const DATA_KEY            = 'yzf.alert';
+  const NAME                = 'editBox';
+  const DATA_KEY            = 'yzf.editBox';
 
-  class Alert {
+  class EditBox {
 
     constructor(element, config) {
       this._element = element;
@@ -22,7 +22,7 @@ const Alert = (($) => {
     }
 
     config(config) {
-      this._config = $.extends({}, this._config, config);
+      this._config = $.extend({}, this._config, config);
     }
 
     hide() {
@@ -31,12 +31,12 @@ const Alert = (($) => {
 
     ok() {
       this.hide();
-      this._config['succ'] && this._config['succ']();
+      this._config['confirm'] && this._config['confirm'](this._element);
     }
 
     cancel() {
       this.hide();
-      this._config['fail'] && this._config['fail']();
+      this._config['cancel'] && this._config['cancel'](this._element);
     }
 
     static _jQueryInterface(config) {
@@ -44,12 +44,12 @@ const Alert = (($) => {
       var returnValue;
 
       return this.each(function () {
-        const $element = $(this).hasClass("alert") ? $(this) : $(this).parents(".alert");
+        const $element = $(this).hasClass("edit-box") ? $(this) : $(this).parents(".edit-box");
         const _config = typeof config === 'object' ? config : null;
         let data = $element.data(DATA_KEY);
 
         if (!data) {
-          data = new Alert($element[0], _config);
+          data = new EditBox($element[0], _config);
           $element.data(DATA_KEY, data);
         }
 
@@ -73,9 +73,9 @@ const Alert = (($) => {
       var target = e.target;
       var action = $(target).attr('data-action');
       if (action == 'close') {
-        Alert._jQueryInterface.call($(this), 'hide');
+        EditBox._jQueryInterface.call($(this), 'hide');
       } else if (action == 'show') {
-        Alert._jQueryInterface.call($(this), 'show');
+        EditBox._jQueryInterface.call($(this), 'show');
       }
     }
 
@@ -95,25 +95,25 @@ const Alert = (($) => {
 
   $(document).on(
     'click',
-    '.alert .alert-close',
+    '.edit-box .edit-box-close',
     function (e) {
-      Alert._jQueryInterface.call($(this), 'hide');
+      EditBox._jQueryInterface.call($(this), 'hide');
     }
   );
 
   $(document).on(
     'click',
-    '.alert .alert-ok',
+    '.edit-box .edit-box-ok',
     function (e) {
-      Alert._jQueryInterface.call($(this), 'ok');
+      EditBox._jQueryInterface.call($(this), 'ok');
     }
   );
 
   $(document).on(
     'click',
-    '.alert .alert-cancel',
+    '.edit-box .edit-box-cancel',
     function (e) {
-      $(this).alert('cancel');
+      $(this).editBox('cancel');
     }
   );
 
@@ -124,12 +124,13 @@ const Alert = (($) => {
    * ------------------------------------------------------------------------
    */
 
-  $.fn[NAME]             = Alert._jQueryInterface
-  $.fn[NAME].Constructor = Alert
+  $.fn[NAME]             = EditBox._jQueryInterface
+  $.fn[NAME].Constructor = EditBox
   $.fn[NAME].noConflict  = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
-    return Alert._jQueryInterface
-  };
-  return Alert
+    return EditBox._jQueryInterface
+  }
+
+  return EditBox
 
 })(jQuery);
