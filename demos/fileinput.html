@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>fileinput</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="-fileinput" style="margin: 10px;">
+      <input class="file" type="button" value="选择文件"  />
+      <div class="content"></div>
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      var htmlStr = [
+        '<input class="file" type="button" value="选择文件" />',
+        '<div class="content"></div>',
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+    </script>
+  </body>
+</html>

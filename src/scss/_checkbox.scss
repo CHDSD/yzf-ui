@@ -3,9 +3,10 @@
 	    width: 16px;   
 	    height: 16px;   
 	    position: relative;   
-	    margin: 8px auto;  
+	    //margin: 10px;  
 	    border:1px solid #CDCDCD;
-	    cursor: pointer;   
+	    cursor: pointer;
+	    box-sizing: content-box;   
 	}  
 	.i-check label {   
 	   width: 16px;   
@@ -30,16 +31,16 @@
 	    border-radius: 0 0 0 2px;  
 	    background: transparent;   
 	    opacity: 0;   
-	    transform: rotate(-45deg);   
+	    transform: rotate(-45deg); 
 	}   
 
-	.shixin {
-	 	border:none;
+	.fill {
+	 	border-color:#22B2E7;
 	 }
-	 .shixin label{
+	 .fill label{
 	 	background: #22B2E7;
 	 }
-	 .shixin label:after{
+	 .fill label:after{
 	 	border-color: white;
 	 }
 
@@ -59,8 +60,5 @@
 	.value{
 		margin-bottom: -2px;
 		display: inline-block;
-	}
-	.btnOperate{
-		margin-top: 20px;
 	}
 }

@@ -4,14 +4,56 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>checkbox</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="-checkbox">
-      <label><div class="i-check value shixin">  
+    <div class="-checkbox" style="margin: 10px;">
+      <label><div class="i-check value ">  
       <input type="checkbox" name="category" class="category" value="选项一" />  
       <label></label>  
       </div> 选项一</label>
     </div>
+
+    <div class="-checkbox" style="margin: 10px;">
+      <label><div class="i-check value fill">  
+      <input type="checkbox" name="category" class="category" value="选项一" />  
+      <label></label>  
+      </div> 选项一</label>
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      var htmlStr = [
+        '<label><div class="i-check value ">',  
+        '<input type="checkbox" name="category" class="category" value="选项一" />',  
+        '<label></label>',  
+        '</div> 选项一</label>',
+        '',
+        '<label><div class="i-check value fill">',  
+        '<input type="checkbox" name="category" class="category" value="选项一" />',  
+        '<label></label>',  
+        '</div> 选项一</label>',
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+    </script>
   </body>
 </html>

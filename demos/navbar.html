@@ -4,7 +4,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>navbar</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
   </head>
   <body>
     <div class="-navbar">
@@ -21,8 +30,35 @@
       </div>   
     </div> 
 
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
     <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
     <script language="javascript" type="text/javascript">
+      var htmlStr = [
+      '<div class="-navbar">',
+      '  <div class="uul">',
+      '    <ul class="navbar">', 
+      '      <li><a href="#" class="ac">首页</a></li>', 
+      '      <li><a href="#">当前订单</a></li>', 
+      '      <li><a href="#">历史订单</a></li>',      
+      '    </ul>',
+      '  </div>',  
+      '  <div class="search-box">',
+      '    <input type="text" class="search-text" placeholder="搜索">',
+      '    <span class="search-btn"></span>',
+      '  </div>',   
+      '</div>', 
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+
       $(document).ready(function (){
         $(".navbar").find("a").each(function(index){
           $(this).click(function(){ 
