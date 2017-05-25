@@ -113,7 +113,7 @@ const Alert = (($) => {
     'click',
     '.alert .alert-cancel',
     function (e) {
-      Alert._jQueryInterface.call($(this), 'cancel');
+      $(this).alert('cancel');
     }
   );
 

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tooltip</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      .test-tooltip {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0 5px;
+        background-color: #dfdfdf;
+      }
+      #code {
+        background-color: #eee;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div style="margin: 10px 20px;">
+      <span class="test-tooltip" data-toggle="tooltip" data-original-title="tooltip text">test-tooltip</span>
+      <span class="test-tooltip" data-toggle="tooltip" data-placement="bottom"data-original-title="tooltip text">test-tooltip</span>
+    </div>
+    <div style="margin: 10px 20px;">
+      <span class="test-tooltip" data-toggle="tooltip" data-placement="top"data-original-title="tooltip text">test-tooltip</span>
+      <span class="test-tooltip" data-toggle="tooltip" data-placement="left"data-original-title="tooltip text">test-tooltip</span>
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery-3.2.1.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      $('[data-toggle="tooltip"]').tooltip();
+
+      var htmlStr = [
+        '<div style="margin: 10px;">',
+        '  <span class="test-tooltip" data-toggle="tooltip" data-original-title="tooltip text">test-tooltip</span>',
+        '  <span class="test-tooltip" data-toggle="tooltip" data-placement="bottom"data-original-title="tooltip text">test-tooltip</span>',
+        '</div>',
+        '<div style="margin: 10px;">',
+        '  <span class="test-tooltip" data-toggle="tooltip" data-placement="top"data-original-title="tooltip text">test-tooltip</span>',
+        '  <span class="test-tooltip" data-toggle="tooltip" data-placement="left"data-original-title="tooltip text">test-tooltip</span>',
+        '</div>'
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+    </script>
+  </body>
+</html>
