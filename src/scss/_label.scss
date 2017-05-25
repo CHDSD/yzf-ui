@@ -1,0 +1,22 @@
+$label-text-color: $text-light-color;
+$label-bg-color: $main-color;
+
+.label {
+  display: inline;
+  padding: 3px 6px;
+  font-size: 75%;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 2.5px;
+  user-select: none;
+}
+.label-default{
+  color:$label-text-color;
+  background: $main-color;
+}
+
+//.label-default {
+//  @include label-variant($label-text-color, $label-bg-color);
+//}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Menu</title>
+  <link rel="stylesheet" href="./lib/github-gist.css">
+  <link rel="stylesheet" href="../dist/css/yzf.css">
+  <style>
+    #code {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+      <ul class="nav in" id="side-menu">
+        <li>
+          <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+          <ul class="nav nav-second-level">
+            <li>
+              <a href="#">Second Level Item</a>
+            </li>
+            <li>
+              <a href="#">Second Level Item</a>
+            </li>
+            <li>
+              <a href="#">Third Level <span class="fa arrow"></span></a>
+              <ul class="nav nav-third-level">
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+                <li>
+                  <a href="#">Third Level Item</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+<p class="code-example">code:</p>
+<div>
+      <pre>
+        <code id="code" className="js"></code>
+      </pre>
+</div>
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<!--<script src="../dist/js/yzf.js"></script>-->
+<script src="../src/js/menue.js"></script>
+<script>
+  var htmlStr = [
+    '<span class = "label label-default">Default</span>'
+  ].join('\n').replace(/\</g, '&lt;');
+
+  $('#code').html(htmlStr);
+  hljs.highlightBlock($('#code')[0]);
+
+  $("#side-menu").metisMenu();
+  var url = window.location;
+  var element = $('ul.nav a').filter(function() {
+    return this.href == url || url.href.indexOf(this.href) == 0;
+  }).addClass('active').parent().parent().addClass('in').parent();
+  if (element.is('li')) {
+    element.addClass('active');
+  }
+</script>
+</body>
+</html>
