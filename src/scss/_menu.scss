@@ -1,69 +1,11 @@
-/*
- * metismenu - v1.1.3
- * Easy menu jQuery plugin for Twitter Bootstrap 3
- * https://github.com/onokumus/metisMenu
- *
- * Made by Osman Nuri Okumus
- * Under MIT License
- */
-.arrow {
-  float: right;
-  line-height: 1.42857;
+a {
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
 }
-
-.glyphicon.arrow:before {
-  content: "\e079";
+ul li {
+  border-bottom: 1px solid #fff;
 }
-
-.active > a > .glyphicon.arrow:before {
-  content: "\e114";
-}
-
-
-/*
- * Require Font-Awesome
- * http://fortawesome.github.io/Font-Awesome/
-*/
-
-
-//.fa.arrow:before {
-//  content: "\f104";
-//}
-//
-//.active > a > .fa.arrow:before {
-//  content: "\f107";
-//}
-
-//.plus-times {
-//  float: right;
-//}
-
-//.fa.plus-times:before {
-//  content: "\f067";
-//}
-
-.active > a > .fa.plus-times {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.plus-minus {
-  float: right;
-}
-
-.fa.plus-minus:before {
-  content: "\f067";
-}
-
-.active > a > .fa.plus-minus:before {
-  content: "\f068";
-}
-
-
 .collapse {
   display: none;
 }
@@ -75,10 +17,6 @@
   margin-bottom: 0;
   list-style: none;
 }
-ul li {
-  border-bottom: 1px solid #fff;
-}
-
 .nav>li {
   position: relative;
   display: block;
@@ -91,41 +29,30 @@ ul li {
   display: block;
   padding: 10px 15px;
 }
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-a {
-  background-color: transparent;
-}
-.fa-fw {
-  width: 1.28571429em;
-  text-align: center;
-}
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.arrow {
-  float: right;
-}
-.nav-second-level li, .sidebar .nav-third-level li {
+.nav-second-level li,.nav-third-level li {
   border-bottom: 0!important;
 }
 .nav-second-level li a {
-  padding-left: 37px;
+  padding-left: 25px;
 }
-.nav-second-level li, .sidebar .nav-third-level li {
-  border-bottom: 0!important;
+.nav-third-level li a {
+  padding-left: 50px;
 }
 .nav > li > a:hover, .nav > li > a:focus {
   text-decoration: none;
   color:#fff;
   background-color: #5494EE;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
