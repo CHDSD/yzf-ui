@@ -1,0 +1,50 @@
+.-list-group{
+	.panel {       
+        /*height: 200px;*/ 
+        width: 570px;
+        display: none; 
+        border: 1px solid #ddd;
+        border-radius: 0 0 3px 3px;
+        border-bottom: none;
+        border-top: none;
+    }
+    .active { 
+        /*background-position: right 12px; */
+        background: url(../image/icon_08.png) no-repeat right !important;
+    }
+    .header{
+        width: 570px;
+        height: 40px;
+        background-color: #69C7F7;
+        border-radius: 3px 3px 0 0;
+        cursor: pointer;
+    }
+    .img{      
+        background: url(../image/icon_07.png) no-repeat right ;
+        width: 30px; 
+        height: 30px;
+        float: left;
+        margin-top: 3px;
+    }
+    .title{
+       display: block;
+    }
+    .span1{
+        height: 30px;
+        font-size: 16px;
+        float: left;
+        line-height: 30px;
+        margin-top:5px;
+        margin-left: 10px;
+    }
+    .list-group-item{
+        background:  #DEEEFF; 
+        height: 35px;
+        line-height: 35px;
+        border-bottom: 1px solid #ddd;
+        padding-left: 15px;
+        &:hover{
+           background: #F5F5F5; 
+        }
+    }
+}

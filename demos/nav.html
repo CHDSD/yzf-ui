@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>nav</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="-nav">
+      <ul class="nav"> 
+      <li><img src="logo02.png"/></li>
+      <!-- <li><span class="img"></span></li> -->
+      <li><a href="#" class="ac">首页</a></li> 
+      <li><a href="#">产品体验</a></li> 
+      <li><a href="#">加入账房</a></li> 
+      <li><a href="#">关于我们</a></li> 
+      </ul> 
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script language="javascript" type="text/javascript">
+      var htmlStr = [
+      '<ul class="nav">', 
+      '  <li><img src="logo02.png"/></li>',
+      '  <li><a href="#" class="ac">首页</a></li>', 
+      '  <li><a href="#">产品体验</a></li>', 
+      '  <li><a href="#">加入账房</a></li>', 
+      '  <li><a href="#">关于我们</a></li>', 
+      '</ul>', 
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+
+      $(document).ready(function (){
+        $(".nav").find("a").each(function(index){
+          $(this).click(function(){ 
+            $(".nav").find("a").removeClass("ac");
+            $(".nav").find("a").eq(index).addClass("ac");
+          });
+        });
+       });
+    </script>
+    
+  </body>
+</html>

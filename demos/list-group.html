@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>list-group</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="-list-group" style="margin: 10px;">
+        <div class="header ">
+            <span class="img title"></span>
+            <span class="title span1">列表组头 <span style="color:#3F99F5"></span></span>
+        </div>
+        <div id="panel" class="panel">
+           <div class="list-group-item">列表项一</div>
+           <div class="list-group-item">列表项二</div>
+           <div class="list-group-item">列表项三</div>
+           <div class="list-group-item">列表项四</div>
+           <div class="list-group-item">列表项五</div>
+        </div>
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      var htmlStr = [
+        '<div class="-list-group">',
+        '  <div class="header ">',
+        '      <span class="img title"></span>',
+        '      <span class="title span1">列表组头 <span style="color:#3F99F5"></span></span>',
+        '  </div>',
+        '  <div id="panel" class="panel">',
+        '     <div class="list-group-item">列表项一</div>',
+        '     <div class="list-group-item">列表项二</div>',
+        '     <div class="list-group-item">列表项三</div>',
+        '     <div class="list-group-item">列表项四</div>',
+        '     <div class="list-group-item">列表项五</div>',
+        '  </div>',
+        '</div>',
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+    </script>
+    <script language="javascript" type="text/javascript">
+      $(document).ready(function(){
+        $(".header").click(function(){
+            $("#panel").slideToggle();
+            $(".img").toggleClass("active"); 
+        });
+    });
+    </script>
+    
+  </body>
+</html>
