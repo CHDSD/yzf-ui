@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>calendar</title>
+    <title>table</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
     <style>
@@ -12,14 +12,25 @@
         }
     </style>
 </head>
-<body>
+<br>
 
-<div class="calendarBox">
-    <span>日历：</span>
-    <input class="input"/>
-    <div class="calendar"></div>
+<div>
+    <span>表格：</span>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </div>
 
+</br>
 <p class="code-example">code:</p>
 <div>
       <pre>
@@ -29,15 +40,9 @@
 
 <script src="./lib/jquery.min.js"></script>
 <script src="./lib/highlight.min.js"></script>
-<script src="../src/js/calendar.js"></script>
 <script>
-    $('.input').on('click',function(e) {
-        $('.calendar').calendar('fill');
-        }
-    );
     var htmlStr = [
-        '日历：<div class="calendar"></div>',
-        '<script src="../src/js/calendar.js"><script>'
+        '表格:'
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);

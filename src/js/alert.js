@@ -129,8 +129,7 @@ const Alert = (($) => {
   $.fn[NAME].noConflict  = function () {
     $.fn[NAME] = JQUERY_NO_CONFLICT
     return Alert._jQueryInterface
-  }
-
+  };
   return Alert
 
 })(jQuery);
