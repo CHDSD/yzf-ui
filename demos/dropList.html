@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
     <style>
-        #code {
+        .code-type {
+            margin: 0;
+        }
+        .code {
             background-color: #eee;
         }
     </style>
 </head>
 <body>
+<br/>
+<div style="margin-left: 20px">
 
-<div>
-    <br/>
-    <span>下拉框：</span>
+    <span style="display: inline-block;vertical-align: top;height: 34px;line-height: 34px;">下拉框：</span>
     <div class="drop-list">
-        <div class="drop-tool">
+        <div class="drop-data">
             <input class="input"/>
             <span class="icon"></span>
         </div>
-        <ul class="option-list">
+        <ul class="drop-option">
             <li>选项一</li>
             <li>选项二</li>
             <li>选项三</li>
@@ -32,22 +35,37 @@
 </div>
 
 <p class="code-example">code:</p>
-<div>
-      <pre>
-        <code id="code" className="js"></code>
-      </pre>
-</div>
+<pre>
+    <code id="code" class="code js"></code>
+</pre>
+<p class="code-type">js</p>
+<pre>
+    <code id="js_code" class="code js">
+        &lt;script>
+            $('.drop-data').on('click',function(){
+                $('.drop-data').droplist('toggle');
+            });
+        &lt;/script>
+    </code>
+</pre>
+
 
 <script src="./lib/jquery.min.js"></script>
 <script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
 <script>
+    $('.drop-data').on('click',function(){
+        $('.drop-data').droplist('toggle');
+    });
+
     var htmlStr = [
-        '下拉框：<div class="drop-list">',
-            '           <div class="drop-tool">',
+        '下拉框：',
+        '<div class="drop-list">',
+            '           <div class="drop-data">',
             '               <input class="input"/>',
             '               <span class="icon"></span>',
         '               </div>',
-            '           <ul class="option-list">',
+            '           <ul class="drop-option">',
             '               <li>选项一</li>',
             '               <li>选项二</li>',
             '               <li>选项三</li>',
@@ -57,14 +75,7 @@
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);
-    $('.input').click(function(){
-        $('.option-list').toggleClass('show');
-    });
-    $(".option-list li").click(function() {
-        var txt = $(this).text();
-        $(".drop-tool input").val(txt);
-        $('.option-list').toggleClass('show');
-    });
+    hljs.highlightBlock($('#js_code')[0]);
 </script>
 </body>
 </html>

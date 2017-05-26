@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
     <style>
-        #code {
+        .code {
             background-color: #eee;
         }
     </style>
@@ -33,11 +33,19 @@
 </div>
 
 <p class="code-example">code:</p>
-<div>
       <pre>
-        <code id="code" class="html"></code>
+        <code id="code" class="code"></code>
       </pre>
-</div>
+<p class="code-type">js</p>
+<pre>
+    <code id="js_code" class="code js">
+        &lt;script>
+        $('.show-modal').on('click', function () {
+            $('#modal').modal('show');
+        });
+        &lt;/script>
+    </code>
+</pre>
 
 <script src="./lib/jquery.min.js"></script>
 <script src="./lib/highlight.min.js"></script>
@@ -64,6 +72,7 @@
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);
+    hljs.highlightBlock($('#js_code')[0]);
 </script>
 </body>
 </html>
