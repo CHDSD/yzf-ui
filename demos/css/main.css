@@ -7,6 +7,22 @@
 	line-height: 50px;
 	background-color: #0269c2;
 }
+.themes {
+	float: right;
+	margin-right: 20px;
+}
+.theme-sw-btn {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #3996f5;
+}
+.theme-sw-btn.red {
+	background: #f77;
+}
+.theme-sw-btn.orange {
+	background: #f70;
+}
 .container {
 	width: 1024px;
 	margin: 0 auto;

@@ -12,9 +12,9 @@
     <!-- nav -->
     <div class="theme-bar">
       <div class="themes">
-        <span class="default"></span>
-        <span class="red"></span>
-        <span class="orange"></span>
+        <span class="theme-sw-btn default" data-theme="default"></span>
+        <span class="theme-sw-btn red" data-theme="red"></span>
+        <span class="theme-sw-btn orange" data-theme="orange"></span>
       </div>
     </div>
 
@@ -271,6 +271,25 @@
     <script src="./lib/jquery-3.2.1.js"></script>
     <script src="../dist/js/yzf.js"></script>
     <script>
+      // 主题切换
+      $('.theme-bar .theme-sw-btn').on('click', function(e) {
+        var themeType = $(this).data('theme');
+        var cls = $(document.body)[0].className;
+        cls = cls.replace(/\s*yzf\-[A-Za-z]+/, '');
+        if (themeType != 'default') {
+          cls = cls + ' yzf-' + themeType;
+          var cssUrl = '../dist/css/yzf-'+themeType+'.css';
+          if($('.yzf-theme-link').length) {
+            $('.yzf-theme-link').attr('href', cssUrl);
+          } else {
+            $('head').append('<link class="yzf-theme-link" rel="stylesheet" href="'+cssUrl+'"/>');
+          }
+        } else {
+          $('.yzf-theme-link').remove();
+        }
+        $(document.body)[0].className = cls;
+      });
+
       // 锚点
       anchors.options = {
         placement: 'left'
