@@ -1,0 +1,20 @@
+  .yzf_radio +label{
+    position: relative;
+    display: inline-block;
+    height: 25px;
+    padding: 3px 26px;
+    font-size: 16px;
+  }
+  .yzf_radio+label:after{
+    content: "";
+    background: url(../../dist/image/radio.png) center no-repeat;
+    width: 16px;
+    height: 16px;
+    display:block;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+  }
+  .yzf_radio:checked+label:after{
+    background: url(../../dist/image/radio_on.png) center no-repeat;
+  }
