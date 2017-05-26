@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>radio</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+        #code {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin: 10px">
+    <input type="radio" class="yzf_radio" name="yzf_radio" id="check-1" hidden><label for="check-1">通过</label>
+    <input type="radio" class="yzf_radio" name="yzf_radio" id="check-2" hidden><label for="check-2" >未通过</label>
+</div>
+
+<p class="code-example">code:</p>
+<div>
+      <pre>
+        <code id="code" className="js"></code>
+      </pre>
+</div>
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
+<script>
+
+    var htmlStr = [
+        '<div style="margin: 10px">',
+        '<input type="radio" class="yzf_radio" name="yzf_radio" id="check-1" hidden><label for="check-1">通过</label>',
+        '<input type="radio" class="yzf_radio" name="yzf_radio" id="check-2" hidden><label for="check-2" >未通过</label>',
+        '</div>'
+    ].join('\n').replace(/\</g, '&lt;');
+    $('#code').html(htmlStr);
+    hljs.highlightBlock($('#code')[0]);
+</script>
+
+</body>
+</html>
