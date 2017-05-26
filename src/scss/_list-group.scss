@@ -3,7 +3,8 @@
         /*height: 200px;*/ 
         width: 570px;
         display: none; 
-        border: 1px solid #ddd;
+        //border: 1px solid #ddd;
+        border: 1px solid $main-border-color;
         border-radius: 0 0 3px 3px;
         border-bottom: none;
         border-top: none;
@@ -15,7 +16,8 @@
     .header{
         width: 570px;
         height: 40px;
-        background-color: #69C7F7;
+        //background-color: #69C7F7;
+        background-color: $main-color;
         border-radius: 3px 3px 0 0;
         cursor: pointer;
     }

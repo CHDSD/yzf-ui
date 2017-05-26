@@ -1,5 +1,6 @@
 .-navbar{
-    background:#22b2e7;
+    //background:#22b2e7;
+    background:$main-color;
     height: 40px;
     position: relative;
     .uul{
@@ -23,7 +24,8 @@
 	ul.navbar{ 
 		//width:100%; 
 		//height:40px; 
-		background:#22b2e7;
+		//background:#22b2e7;
+		background:$main-color;
 		margin:0 auto;
 	} 
 	ul.navbar li{
@@ -63,7 +65,8 @@
 		       display: inline-block;
 		       margin-left: 16px;
 		       margin-top: 2px;
-		       color: #666a80;
+		       //color: #666a80;
+		       color: $text-color;
 		       border: none;
 		       outline:none;
 		       vertical-align: top;

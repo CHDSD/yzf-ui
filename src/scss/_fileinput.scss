@@ -3,16 +3,19 @@
 	  width: 100px;
 	  height: 35px;
 	  border-radius: 5px;
-	  color: #333;
+	  //color: #333;
+	  color: $text-color;
 	  background-color: #fff;
 	  border: 1px solid #CFE5F1;
 	  font-size: 16px;
 	  margin-bottom: 10px;
 	  cursor: pointer;
 	  &:hover{
-		  color: #333;
+		  //color: #333;
+		  color: $text-color;
 		  background-color:#C1E4F8;
-		  border-color: #CFE5F1;
+		  //border-color: #CFE5F1;
+		  border-color:$main-border-color;
 		}
 	}	
 	.content{
