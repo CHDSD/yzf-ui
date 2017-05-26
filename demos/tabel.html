@@ -16,18 +16,64 @@
 
 <div>
     <span>表格：</span>
-    <table class="table">
-        <thead>
+    <br/>
+    <div style="width: 800px;margin-left: 20px">
+        <span>basic tabel</span>
+        <table class="table">
+            <thead>
             <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>序号</th>
+                <th>项目名称</th>
+                <th>楼栋</th>
             </tr>
-        </thead>
-        <tbody>
-
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <span>border tabel</span>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>项目名称</th>
+                <th>楼栋</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>01</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 </br>
@@ -42,7 +88,61 @@
 <script src="./lib/highlight.min.js"></script>
 <script>
     var htmlStr = [
-        '表格:'
+        '表格:',
+        'basic tabel',
+        '<table class="table">',
+    '        <thead>',
+        '       <tr>',
+        '        <th>序号</th>',
+        '        <th>项目名称</th>',
+        '        <th>楼栋</th>',
+        '        </tr>',
+    '        </thead>',
+    '        <tbody>',
+        '        <tr>',
+        '           <td>01</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '       <tr>',
+        '           <td>02</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '       <tr>',
+        '           <td>03</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '   </tbody>',
+        '</table>',
+        'border tabel',
+        '<table class="table table-bordered">',
+        '        <thead>',
+        '       <tr>',
+        '        <th>序号</th>',
+        '        <th>项目名称</th>',
+        '        <th>楼栋</th>',
+        '        </tr>',
+        '        </thead>',
+        '        <tbody>',
+        '        <tr>',
+        '           <td>01</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '       <tr>',
+        '           <td>02</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '       <tr>',
+        '           <td>03</td>',
+        '           <td>成都新天地春天里</td>',
+        '           <td>1楼</td>',
+        '       </tr>',
+        '   </tbody>',
+        '</table>'
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);
