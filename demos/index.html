@@ -244,6 +244,21 @@
       <span>下拉框</span>
       <a class="doc-link" _target="blank" href="droplist.html">(文档)</a>
       </h3>
+      <p>下拉框 one</p>
+      <div class="drop-list drop-list-small">
+        <div class="drop-data">
+          <input class="input"/>
+          <span class="icon"></span>
+        </div>
+        <ul class="drop-option">
+          <li>本月</li>
+          <li>本周</li>
+          <li>今天</li>
+        </ul>
+      </div>
+      <br/>
+      <br/>
+      <p>下拉框 two</p>
       <div class="drop-list">
         <div class="drop-data">
           <input class="input"/>
@@ -306,9 +321,10 @@
       });
 
       //下拉框
-      $('.drop-data').on('click',function(){
-        $('.drop-data').droplist('toggle');
+      $('.drop-list').on('click',function(){
+        $(this).droplist('toggle');
       });
+
     </script>
   </body>
 </html>

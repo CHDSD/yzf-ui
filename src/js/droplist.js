@@ -4,18 +4,19 @@ const dropList = (($) => {
 	const DATA_KEY            = 'yzf.droplist';
 	class dropList {
 		constructor(element, config) {
+			console.log('element',element);
 			this._element = element;
 			this._config = config || {};
 		}
 		toggle() {
-			$('.drop-option').toggle();
+			$(this._element).children('.drop-option').toggle();
 		}
 		hide(){
-			$('.drop-option').hide();
+			$(this._element).children('.drop-option').hide();
 		}
 		keydown(e){
 			var txt = e.target.innerText;
-			$(".drop-data input").val(txt);
+			$(this._element).children(".drop-data").children("input").val(txt);
 			this.hide();
 		}
 		static _jQueryInterface(config) {
