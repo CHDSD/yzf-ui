@@ -1,47 +1,49 @@
-a {
-  color: #fff;
-  text-decoration: none;
-  background-color: transparent;
-}
-ul li {
-  border-bottom: 1px solid #fff;
-}
-.collapse {
-  display: none;
-}
-.collapse.in {
-  display: block;
-}
-.nav {
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none;
-}
-.nav>li {
-  position: relative;
-  display: block;
-}
-.nav>li>a {
-  background: #E0EEFD;
-  border-bottom: 1px solid #fff;
-  position: relative;
-  color:#000;
-  display: block;
-  padding: 10px 15px;
-}
-.nav-second-level li,.nav-third-level li {
-  border-bottom: 0!important;
-}
-.nav-second-level li a {
-  padding-left: 25px;
-}
-.nav-third-level li a {
-  padding-left: 50px;
-}
-.nav > li > a:hover, .nav > li > a:focus {
-  text-decoration: none;
-  color:#fff;
-  background-color: #5494EE;
+.menu{
+  a {
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+  }
+  ul li {
+    border-bottom: 1px solid #fff;
+  }
+  .collapse {
+    display: none;
+  }
+  .collapse.in {
+    display: block;
+  }
+  .nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .nav>li {
+    position: relative;
+    display: block;
+  }
+  .nav>li>a {
+    background: #E0EEFD;
+    border-bottom: 1px solid #fff;
+    position: relative;
+    color:#000;
+    display: block;
+    padding: 10px 15px;
+  }
+  .nav-second-level li,.nav-third-level li {
+    border-bottom: 0!important;
+  }
+  .nav-second-level li a {
+    padding-left: 25px;
+  }
+  .nav-third-level li a {
+    padding-left: 50px;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    color:#fff;
+    background-color: #5494EE;
+  }
 }
 
 
