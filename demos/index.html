@@ -131,8 +131,124 @@
             </div>
           </div>
         </div>
+
+      <!-- breadcrumbs -->
+      <h2 class="comp-title anchored">
+      <span>路径导航</span>
+      <a class="doc-link" _target="blank" href="breadcrumbs.html">(文档)</a>
+      </h3>
+      <div class="breadcrumbs-demo">
+        <ol class="breadcrumbs">
+          <li class="active">Home</li>
+        </ol>
+        <ol class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li class="active">Library</li>
+        </ol>
+        <ol class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Library</a></li>
+          <li class="active">Data</li>
+        </ol>
       </div>
 
+      <!-- tables -->
+      <h2 class="comp-title anchored">
+        <span>表格</span>
+        <a class="doc-link" _target="blank" href="tabel.html">(文档)</a>
+      </h3>
+      <div>
+        <span>表格：</span>
+        <br/>
+        <div style="width: 800px;margin-left: 20px">
+          <span>basic tabel</span>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>序号</th>
+              <th>项目名称</th>
+              <th>楼栋</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>01</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            </tbody>
+          </table>
+          <br/>
+          <span>border tabel</span>
+          <table class="table table-bordered">
+            <thead>
+            <tr>
+              <th>序号</th>
+              <th>项目名称</th>
+              <th>楼栋</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>01</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>成都新天地春天里</td>
+              <td>1楼</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- modal -->
+      <h2 class="comp-title anchored">
+        <span>模态弹框</span>
+        <a class="doc-link" _target="blank" href="modal.html">(文档)</a>
+        </h3>
+        <div style="margin: 10px;">
+          <button class="btn btn-default show-modal" >show modal</button>
+        </div>
+        <div class="modal shade" id="modal">
+          <div class="modal-content">
+            <div class="modal-title">
+              <span>Title</span>
+              <span class="yzf-icon yzf-icon-close modal-close"></span>
+            </div>
+            <div class="modal-body">Modal Body</div>
+            <div class="modal-footer">
+              <button class="btn btn-light modal-cancel">取消</button>
+              <button class="btn btn-default modal-ok">确定</button>
+            </div>
+          </div>
+        </div>
+
+      <!-- droplist -->
+      <h2 class="comp-title anchored">
+      <span>下拉框</span>
+      <a class="doc-link" _target="blank" href="droplist.html">(文档)</a>
+      </h3>
+      <div style="margin: 10px;">
+        <span>下拉框：</span>
+      </div>
 
 
     </div>
@@ -168,6 +284,11 @@
       });
       $('.show-edit-box').on('click', function () {
         $('.edit-box').editBox('show');
+      });
+
+      //模态弹框
+      $('.show-modal').on('click', function () {
+        $('#modal').modal('show');
       });
     </script>
   </body>
