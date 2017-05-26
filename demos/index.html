@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>yzf-ui</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- nav -->
+    <div class="theme-bar">
+      <div class="themes">
+        <span class="default"></span>
+        <span class="red"></span>
+        <span class="orange"></span>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <h1 id="overview" class="block-title anchored">概览</h2>
+      <p>云帐房风格组件列表。主要是css，部分组件交互效果依赖jquery实现。如果使用react，vue，angular等框架时，如果不想引入jquery，可以只引入css，在视图渲染时自己控制组件的dom结构。</p>
+
+      <h1 id="components" class="block-title anchored">组件列表</h2>
+
+      <!-- button -->
+      <h2 id="button" class="comp-title anchored">
+        <span>按钮</span>
+        <a class="doc-link" _target="blank" href="button.html">(文档)</a>
+      </h3>
+      <div class="comp-demo">
+        <button class="btn btn-default">button-default</button>
+        <input type="button" class="btn btn-default" value="button-default">
+        <span class="btn btn-default">button-default</span>
+        <a class="btn btn-default">button-default</a>
+        <br><br>
+        <button class="btn btn-light">button-light</button>
+        <input type="button" class="btn btn-light" value="button-light">
+        <span class="btn btn-light">button-light</span>
+        <a class="btn btn-light">button-light</a>
+        <br><br>
+        <button class="btn btn-pure">button-pure</button>
+        <input type="button" class="btn btn-pure" value="button-pure">
+        <span class="btn btn-pure">button-pure</span>
+        <a class="btn btn-pure">button-pure</a>
+      </div>
+
+      <!-- button group -->
+      <h2 id="button_group" class="comp-title anchored">
+        <span>按钮组</span>
+        <a class="doc-link" _target="blank" href="buttonGroup.html">(文档)</a>
+      </h3>
+      <div class="comp-demo">
+        <div class="btn-group">
+          <button class="btn btn-default">button-default</button>
+          <input type="button" class="btn btn-default" value="button-default">
+          <span class="btn btn-default">button-default</span>
+          <a class="btn btn-default">button-default</a>  
+        </div>
+        <br><br>      
+        <div class="btn-group">
+          <button class="btn btn-light">button-light</button>
+          <input type="button" class="btn btn-light" value="button-light">
+          <span class="btn btn-light">button-light</span>
+          <a class="btn btn-light">button-light</a>
+        </div>
+        <br><br>
+        <div class="btn-group">
+          <button class="btn btn-pure">button-pure</button>
+          <input type="button" class="btn btn-pure" value="button-pure">
+          <span class="btn btn-pure">button-pure</span>
+          <a class="btn btn-pure">button-pure</a>
+        </div>
+      </div>
+
+      <!-- alert -->
+      <h2 id="alert" class="comp-title anchored">
+        <span>警告框</span>
+        <a class="doc-link" _target="blank" href="alert.html">(文档)</a>
+      </h3>
+      <div class="comp-demo">
+        <button class="btn btn-default show-alert">点击弹出警告框</button>
+        <div class="alert">
+          <div class="box">
+            <p class="alert-title">冻结提示</p>
+            <span class="yzf-icon yzf-icon-close alert-close"></span>
+            <div class="content">请确认是否继续冻结所选择的所有元素？</div>
+            <div class="btns">
+              <button class="btn btn-light alert-cancel">取消</button>
+              <button class="btn btn-default alert-ok">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- tooltip -->
+      <h2 id="tooltip" class="comp-title anchored">
+        <span>工具提示</span>
+        <a class="doc-link" _target="blank" href="tooltip.html">(文档)</a>
+      </h3>
+      <div class="comp-demo">
+        <span class="btn btn-pure" data-toggle="tooltip" data-original-title="tooltip text">tooltip</span>
+        <span class="btn btn-pure" data-toggle="tooltip" data-placement="bottom" data-original-title="tooltip text">tooltip-bottom</span>
+        <span class="btn btn-pure" data-toggle="tooltip" data-placement="top" data-original-title="tooltip text">tooltip-top</span>
+        <span class="btn btn-pure" data-toggle="tooltip" data-placement="left" data-original-title="tooltip text">tooltip-left</span>
+      </div>
+
+      <!-- editBox -->
+      <h2 id="edit_box" class="comp-title anchored">
+        <span>编辑框</span>
+        <a class="doc-link" _target="blank" href="editBox.html">(文档)</a>
+      </h3>
+      <div class="comp-demo">
+        <button class="btn btn-default show-edit-box">点击弹出编辑框</button>
+
+        <div class="edit-box">
+          <div class="box">
+            <p class="edit-box-title">编辑票据模板</p>
+            <span class="yzf-icon yzf-icon-close edit-box-close"></span>
+            <div class="content">
+              <!-- 自定义输入项 -->
+              <div class="rows">模板编码: <input type="text" class="yzf_input"></div>
+              <div class="rows">模板名称: <input type="text" class="yzf_input"></div>
+              <!-- 自定义输入项 -->
+            </div>
+            <div class="btns">
+              <button class="btn btn-light edit-box-cancel">取消</button>
+              <button class="btn btn-default edit-box-ok">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <script src="./lib/anchor.min.js"></script>
+    <script src="./lib/jquery-3.2.1.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      // 锚点
+      anchors.options = {
+        placement: 'left'
+      };
+      anchors.add('.anchored');
+
+      // 警告框
+      $('.show-alert').on('click', function () {
+        $('.alert').alert('show');
+      });
+
+      // 工具提示
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // 编辑框
+      $('.edit-box').editBox('config', {
+        confirm: function(el) {
+          console.log('confirm', el);
+          // do something...
+        },
+        cancel: function (el) {
+          console.log('cancel', el);
+          // do something...
+        }
+      });
+      $('.show-edit-box').on('click', function () {
+        $('.edit-box').editBox('show');
+      });
+    </script>
+  </body>
+</html>

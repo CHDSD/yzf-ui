@@ -30,11 +30,11 @@ const Tooltip = (($) => {
     _setListeners() {
       let _this = this;
       $(this._element).on('mouseenter', function(e) {
-        // console.log('show tip');
+        console.log('show tip');
         _this._enter(e);
       });
       $(this._element).on('mouseleave', function(e) {
-        // console.log('hide tip');
+        console.log('hide tip');
         _this._leave(e);
       });
     }
@@ -74,6 +74,8 @@ const Tooltip = (($) => {
       let cw = $el.outerWidth();
       let ch = $el.outerHeight();
       let top, left;
+      offset.top = offset.top - $(document).scrollTop();
+      offset.left = offset.left - $(document).scrollLeft();
       top = offset.top + ch / 2;
       left = offset.left + cw / 2;
 
@@ -93,7 +95,7 @@ const Tooltip = (($) => {
         default:
           break;
       }
-      // console.log(offset, top, left);
+      console.log(offset, top, left);
       return {
         top: top + 'px',
         left: left + 'px'
@@ -106,6 +108,8 @@ const Tooltip = (($) => {
       let wh = $(window).height();
       let ww = $(window).width();
       let posV, posH;
+      offset.top = offset.top - $(document).scrollTop();
+      offset.left = offset.left - $(document).scrollLeft();
       if (offset.top < wh / 2) {
         posV = 'bottom';
       } else {

@@ -88,7 +88,6 @@ const Menu = (($) => {
     const DATA_KEY = 'yzf.menu';
     const EVENT_KEY = `.${DATA_KEY}`;
     const DATA_API_KEY = '.data-api';
-    //const JQUERY_NO_CONFLICT = $.fn[NAME];
     const TRANSITION_DURATION = 350;
 
     const Default = {
@@ -163,9 +162,9 @@ const Menu = (($) => {
                         }
                     }
 
-                    if (self._config.onTransitionStart) {
-                        self._config.onTransitionStart(e);
-                    }
+                    //if (self._config.onTransitionStart) {
+                    //    self._config.onTransitionStart(e);
+                    //}
                 });
 
         }

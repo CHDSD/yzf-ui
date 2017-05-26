@@ -11,12 +11,19 @@ $label-bg-color: $main-color;
   vertical-align: baseline;
   border-radius: 2.5px;
   user-select: none;
+  cursor:default;
 }
 .label-default{
   color:$label-text-color;
   background: $main-color;
+  border:1px solid $main-color;
 }
-
-//.label-default {
-//  @include label-variant($label-text-color, $label-bg-color);
-//}
+.label-pure{
+  color:$main-color;
+  background: #fff;
+  border:1px solid $main-color;
+  &:hover {
+    color:$label-text-color;
+    background: $main-color;
+  }
+}
