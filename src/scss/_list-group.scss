@@ -11,7 +11,7 @@
     }
     .active { 
         /*background-position: right 12px; */
-        background: url(../image/icon_08.png) no-repeat right !important;
+        //background: url(../image/icon_08.png) no-repeat right !important;
     }
     .header{
         width: 570px;
@@ -22,7 +22,7 @@
         cursor: pointer;
     }
     .img{      
-        background: url(../image/icon_07.png) no-repeat right ;
+        //background: url(../image/icon_07.png) no-repeat right ;
         width: 30px; 
         height: 30px;
         float: left;
@@ -38,6 +38,7 @@
         line-height: 30px;
         margin-top:5px;
         margin-left: 10px;
+        color:$text-color;
     }
     .list-group-item{
         background:  #DEEEFF; 

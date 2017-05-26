@@ -6,14 +6,16 @@
 	  //color: #333;
 	  color: $text-color;
 	  background-color: #fff;
-	  border: 1px solid #CFE5F1;
+	  //border: 1px solid #CFE5F1;
+	  border: 1px solid $main-color;
 	  font-size: 16px;
 	  margin-bottom: 10px;
 	  cursor: pointer;
 	  &:hover{
 		  //color: #333;
 		  color: $text-color;
-		  background-color:#C1E4F8;
+		  //background-color:#C1E4F8;
+		  background-color:$main-color;
 		  //border-color: #CFE5F1;
 		  border-color:$main-border-color;
 		}
@@ -21,6 +23,7 @@
 	.content{
 	  width: 600px;
 	  height: 400px;
-	  border: 1px solid #CFE5F1;
+	 // border: 1px solid #CFE5F1;
+	 border: 1px solid $main-color;
 	}
 }
