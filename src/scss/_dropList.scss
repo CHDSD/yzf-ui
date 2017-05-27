@@ -1,43 +1,48 @@
 $drop-list-bg: #fff;
-//*{
-//  margin:0;
-//  padding: 0;
-//  input{
-//    outline: none;
-//  }
-//}
-//li{
-//  list-style: none;
-//}
+$drop-data-bg:$sec-color;
+
+input{
+  outline: none;
+}
+
 .drop-list{
   display: inline-block;
   position: relative;
   .show{
     display: block!important;
   }
-  .drop-tool input{
+  .drop-data{
+    width:500px;
+    height:34px;
+    overflow: hidden;
+    font-size: 0;
+    -webkit-text-size-adjust: none;
+  }
+  .drop-data input{
     height:34px;
     width:466px;
     padding-left: 28px;
     color:$text-color;
   }
-  .drop-tool span{
+  .drop-data span{
     height: 34px;
     width: 34px;
     display: inline-block;
     vertical-align: top;
     border: $main-border-color 1px solid;
+    border-left:0;
     background: url(../../dist/image/drop.png) center no-repeat;
   }
-  .option-list{
+  .drop-option{
     display: none;
     position: absolute;
-    width: 467px;
+    width: 466px;
     top:34px;
     background:$drop-list-bg;
     border: $main-border-color 1px solid;
     border-top: 0;
     padding: 2.5px 0;
+    z-index: 9;
     li{
       height:35px;
       padding-left: 28px;
@@ -47,6 +52,46 @@ $drop-list-bg: #fff;
     }
     li:hover{
       color: $main-color;
+      cursor: pointer;
+    }
+  }
+}
+.drop-list-small{
+  .drop-data{
+    height:30px;
+    width: 140px;
+    background:$drop-data-bg ;
+  }
+  .drop-data input{
+    display: inline-block;
+    padding-left: 14px;
+    width: 109px;
+    height: 28px;
+    margin-top: 1px;
+    margin-left: 1px;
+    line-height: 30px;
+    border: none;
+
+  }
+  .drop-data span{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    vertical-align: top;
+    border: none;
+    background: url(../../dist/image/drop-small.png) center no-repeat;
+  }
+  .drop-option{
+    width: 140px;
+    top:30px;
+    background:$drop-list-bg;
+    border: $drop-data-bg 1px solid;
+    border-top: 0;
+    padding: 0;
+    li{
+      height:30px;
+      line-height: 30px;
+      padding-left: 14px;
     }
   }
 }
