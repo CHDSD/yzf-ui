@@ -32,10 +32,26 @@
 		color:$main-color !important;
 	}
 
-	ul.nav img{
-		vertical-align:middle;
+	ul.nav .logo{
+		//vertical-align:middle;
 		margin-right: 150px;
-		margin-left: 50px;
+		margin-left: 60px;
+		width: 150px;
+		height: 70px;
+		background-color: $main-color;
+		display: inline-block;
+		line-height: 70px;
+		text-align: center;
+		font-size: 22px;
+		color:white;
+		font-weight: bold;
+		font-family:Georgia;
+		user-select:none;
+		-webkit-user-select:none;
+		-ms-user-select:none;
+		-khtml-user-select:none;
+		-moz-user-select:none;
+		-o-user-select:none;
 	}
 
 }
