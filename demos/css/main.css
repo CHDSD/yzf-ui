@@ -23,6 +23,9 @@
 .theme-sw-btn.orange {
 	background: #f70;
 }
+.theme-sw-btn.green {
+	background: #6c6;
+}
 .container {
 	width: 1024px;
 	margin: 0 auto;
