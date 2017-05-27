@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<div class="calendarBox">
+<div class="calendarBox" style="margin-left: 20px">
     <span>日历：</span>
     <input class="input"/>
     <div class="calendar"></div>
@@ -32,7 +32,7 @@
 <script src="../src/js/calendar.js"></script>
 <script>
     $('.input').on('click',function(e) {
-        $('.calendar').calendar('fill');
+        $('.calendar').calendar('calendarRender');
         }
     );
     var htmlStr = [
