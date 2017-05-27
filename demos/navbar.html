@@ -19,9 +19,9 @@
     <div class="-navbar">
       <div class="uul">
         <ul class="navbar"> 
-        <li><a href="#" class="ac">首页</a></li> 
-        <li><a href="#">当前订单</a></li> 
-        <li><a href="#">历史订单</a></li>      
+        <li><a href="javascript:void(0)" class="navbara ac">首页</a></li> 
+        <li><a href="javascript:void(0)" class="navbara">当前订单</a></li> 
+        <li><a href="javascript:void(0)" class="navbara">历史订单</a></li>      
         </ul>
       </div>  
       <div class="search-box">
@@ -45,9 +45,9 @@
       '<div class="-navbar">',
       '  <div class="uul">',
       '    <ul class="navbar">', 
-      '      <li><a href="#" class="ac">首页</a></li>', 
-      '      <li><a href="#">当前订单</a></li>', 
-      '      <li><a href="#">历史订单</a></li>',      
+      '      <li><a href="javascript:void(0)" class="ac">首页</a></li>', 
+      '      <li><a href="javascript:void(0)">当前订单</a></li>', 
+      '      <li><a href="javascript:void(0)">历史订单</a></li>',      
       '    </ul>',
       '  </div>',  
       '  <div class="search-box">',
@@ -59,14 +59,11 @@
       $('#code').html(htmlStr);
       hljs.highlightBlock($('#code')[0]);
 
-      $(document).ready(function (){
-        $(".navbar").find("a").each(function(index){
-          $(this).click(function(){ 
-            $(".navbar").find("a").removeClass("ac");
-            $(".navbar").find("a").eq(index).addClass("ac");
-          });
+      $(".navbara").each(function(index){
+        $(this).click(function(){ 
+          $(".navbara").eq(index).navbara("toggle");
         });
-       });
+      });
     </script>
     
   </body>
