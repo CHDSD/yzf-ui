@@ -42,14 +42,6 @@ const Panel = (($) => {
 		}
 	}
 
-	// $(document).on(
-	// 	'click',
-	// 	'.header',
-	// 	function (e) {
-	// 		$(this).droplist('keydown',e);
-	// 	}
-	// );
-
 	$.fn[NAME]             = Panel._jQueryInterface;
 	return Panel;
 })(jQuery);
