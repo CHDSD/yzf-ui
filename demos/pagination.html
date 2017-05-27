@@ -39,11 +39,14 @@
   });
 
   var htmlStr = [
+    '<ul class="pagination" id="pagination-example"></ul>',
+    '<script>',
     ' <ul id="pagination-example"></ul>',
     '$("#pagination-example").yzfPagination({',
       'totalPages: 35,',
       'visiblePages: 10',
-    '});'
+    '});',
+    '<\/script>'
   ].join('\n').replace(/\</g, '&lt;');
   $('#code').html(htmlStr);
   hljs.highlightBlock($('#code')[0]);
