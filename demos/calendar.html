@@ -16,7 +16,6 @@
 
 <div class="calendarBox" style="margin-left: 20px">
     <span>日历：</span>
-    <input class="input"/>
     <div class="calendar"></div>
 </div>
 
@@ -31,7 +30,7 @@
 <script src="./lib/highlight.min.js"></script>
 <script src="../src/js/calendar.js"></script>
 <script>
-    $('.input').on('click',function(e) {
+    $(document).ready(function(e) {
         $('.calendar').calendar('calendarRender');
         }
     );

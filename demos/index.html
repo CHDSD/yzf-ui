@@ -372,8 +372,7 @@
       <a class="doc-link" _target="blank" href="calendar.html">(文档)</a>
       </h2>
       <span>日历：</span>
-
-
+      <div class="calendar"></div>
 
       <!-- input -->
       <h2 class="comp-title anchored">
@@ -605,6 +604,11 @@
       $('.drop-list').on('click',function(){
         $(this).droplist('toggle');
       });
+      // 日历
+      $(document).ready(function(e) {
+          $('.calendar').calendar('calendarRender');
+        }
+      );
 
       //menue
       $("#side-menu").menu();

@@ -21,8 +21,8 @@ const Calendar = (($) => {
     let curTime = new Date();
     let viewTime = new Date();
     let curView = 'month';
-    let showItem = false;
-    let tools;
+    //let showItem = false;
+    //let tools;
     class Calendar {
         constructor(element){
             console.log('element',element);
@@ -55,6 +55,7 @@ const Calendar = (($) => {
                 items+
                 '</div>';
             $(this._element).html(calendarHtml);
+            $(this._element).children('.ipt-box').children('input').val(selTimeStr);
         }
         //月视图组件，显示一个月中的天
         monthRender() {
@@ -97,7 +98,7 @@ const Calendar = (($) => {
                     cls += ' disable';
                 }
                 if (selTime) {
-                    if (tUtils.compareTime(monthDay, selTime, 'date')) {
+                    if (this.compareTime(monthDay, selTime, 'date')) {
                         cls += ' cur';
                     }
                 }
@@ -121,7 +122,7 @@ const Calendar = (($) => {
                     cls += ' disable';
                 }
                 if (selTime) {
-                    if (tUtils.compareTime(monthDay, selTime, 'date')) {
+                    if (this.compareTime(monthDay, selTime, 'date')) {
                         cls += ' cur';
                     }
                 }
@@ -160,7 +161,7 @@ const Calendar = (($) => {
                     cls += ' post-month';
                 }
                 if (selTime) {
-                    if (tUtils.compareTime(monthDay, selTime, 'month')) {
+                    if (this.compareTime(monthDay, selTime, 'month')) {
                         cls += ' cur';
                     }
                 }
@@ -196,7 +197,7 @@ const Calendar = (($) => {
                     cls += ' disable';
                 }
                 if (selTime) {
-                    if (tUtils.compareTime(monthDay, selTime, 'year')) {
+                    if (this.compareTime(monthDay, selTime, 'year')) {
                         cls += ' cur';
                     }
                 }
@@ -251,8 +252,23 @@ const Calendar = (($) => {
             this.calendarRender();
         }
         // 日被点击
-        dayClk(nextSelTime, nextSelTimeStr, nextViewTime) {
-            this.setSelectTime(nextSelTime, nextSelTimeStr, nextViewTime);
+        dayClk(e) {
+            if(e.target.className.match(/disable/)) {
+                return ;
+            }
+            let { y, m, d } = this.getYmd(viewTime);
+            let cls = e.target.className;
+            d = e.target.innerHTML;
+            if (cls.match(/pre-month/)) {
+                m -= 1;
+            } else if (cls.match(/post-month/)) {
+                m += 1;
+            }
+            selTime = new Date(y, m, e.target.innerHTML);
+            selTimeStr = this.timeToStr(selTime);
+            //$(this._element).children('.ipt-box').children('input').val(selTimeStr);
+            //viewTime = new Date(y, m, d);
+            this.calendarRender();
         }
 
         // 月份被点击
@@ -268,15 +284,13 @@ const Calendar = (($) => {
                 }
             }
             if (typeof month === 'number') {
-                let viewTime = this.state.viewTime;
                 let y = viewTime.getFullYear();
                 let m = viewTime.getMonth();
                 let d = viewTime.getDate();
-                this.setState({
-                    viewTime: new Date(y, month, 1),
-                    curView: 'month'
-                });
+                    viewTime = new Date(y, month, 1);
+                    curView = 'month';
             }
+            this.calendarRender();
         }
 
         // 年被点击
@@ -284,13 +298,16 @@ const Calendar = (($) => {
             if(e.target.className.match(/disable/)) {
                 return ;
             }
-            let { y, m, d } = tUtils.getYmd(this.state.viewTime);
+            let { y, m, d } = this.getYmd(viewTime);
             let year = e.target.innerHTML;
 
-            this.setState({
-                viewTime: new Date(year, 0, 1),
-                curView: 'year'
-            });
+            viewTime =  new Date(year, 0, 1);
+            curView = 'year';
+            this.calendarRender();
+        }
+        // 显示、隐藏日历框。如果将要显示日历框时，重置viewTime为当前选中时间selTime，或当前时间。
+        toggle() {
+            $(this._element).children('.item-box').toggle();
         }
         static _jQueryInterface(config) {
             var args = Array.prototype.slice.call(arguments, 1);
@@ -346,8 +363,38 @@ const Calendar = (($) => {
             }
             return info;
         }
-        dispose() {
-            $.removeData(this._element, DATA_KEY);
+        //时间转换为字符串
+        timeToStr(date) {
+            let y = date.getFullYear();
+            let m = date.getMonth();
+            let d = date.getDate();
+
+            m = (m + 101 + '').substring(1);
+            d = (d + 100 + '').substring(1);
+            return [y, m, d].join('-');
+        }
+        //对比两个时间对象是否相同
+        compareTime(dateA, dateB, level) {
+            if (!level) {
+                return dateA.getTime() === dateB.getTime();
+            }
+
+            if (dateA.getFullYear() === dateB.getFullYear()) {
+                if (level === 'year') {
+                    return true;
+                }
+                if (dateA.getMonth() === dateB.getMonth()) {
+                    if (level === 'month') {
+                        return true;
+                    }
+                    if (dateA.getDate() === dateB.getDate()) {
+                        if (level === 'date') {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
         }
 
     }
@@ -378,19 +425,35 @@ const Calendar = (($) => {
 
     //$(document).on(
     //    'click',
-    //    '.calendar .months',
+    //    '.calendar .ipt-box',
     //    function (e) {
-    //        Calendar._jQueryInterface.call($(this), 'monthClk',e);
+    //        Calendar._jQueryInterface.call($(this), 'toggle');
     //    }
     //);
 
-    //$(document).on(
-    //    'click',
-    //    '.calendar .years',
-    //    function (e) {
-    //        Calendar._jQueryInterface.call($(this), 'yearClk',e);
-    //    }
-    //);
+    $(document).on(
+        'click',
+        '.calendar .months',
+        function (e) {
+            Calendar._jQueryInterface.call($(this), 'monthClk',e);
+        }
+    );
+
+    $(document).on(
+        'click',
+        '.calendar .years',
+        function (e) {
+            Calendar._jQueryInterface.call($(this), 'yearClk',e);
+        }
+    );
+
+    $(document).on(
+        'click',
+        '.calendar .days',
+        function (e) {
+            Calendar._jQueryInterface.call($(this), 'dayClk',e);
+        }
+    );
 
     $.fn[NAME]             = Calendar._jQueryInterface;
     return Calendar;
