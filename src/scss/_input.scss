@@ -1,16 +1,17 @@
 .yzf-input-group{
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: inline-block;
   .input_title{
     white-space: nowrap;
     font-size: 16px;
+    color: $text-color;
   }
 }
 .yzf_input{
   background-color: #fff;
   border: 1px solid #cdcdcd;
-  color:#000;
+  color:$text-color;
   width: 226px;
   height: 30px;
   box-sizing: border-box;
