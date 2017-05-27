@@ -17,7 +17,7 @@
 <div>
   <div class="tabs">
     <ul class="nav-tabs">
-      <li class="active"><a href="#home" data-toggle="tab">Home</a>
+      <li class="active"><a href="#home" data-toggle="tab" style="margin-left:0px">Home</a>
       </li>
       <li><a href="#profile" data-toggle="tab">Profile</a>
       </li>
@@ -57,11 +57,14 @@
 <script src="./lib/jquery.min.js"></script>
 <script src="./lib/highlight.min.js"></script>
 <script src="../dist/js/yzf.js"></script>
+<script>
   var htmlStr = [
     '<span class = "label label-default">Default</span>'
   ].join('\n').replace(/\</g, '&lt;');
   $('#code').html(htmlStr);
   hljs.highlightBlock($('#code')[0]);
+
+
 </script>
 </body>
 </html>
