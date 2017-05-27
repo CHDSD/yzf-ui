@@ -16,7 +16,6 @@
 
 <div>
   <div class="tabs">
-    <!-- Nav tabs -->
     <ul class="nav-tabs">
       <li class="active"><a href="#home" data-toggle="tab">Home</a>
       </li>
@@ -27,8 +26,6 @@
       <li><a href="#settings" data-toggle="tab">Settings</a>
       </li>
     </ul>
-
-    <!-- Tab panes -->
     <div class="tab-content">
       <div class="tab-pane fade in active" id="home">
         <h4>Home Tab</h4>
@@ -58,17 +55,13 @@
 </div>
 
 <script src="./lib/jquery.min.js"></script>
-<script src="./lib/jquery.min.js"></script>
-<script src="../src/js/tabs.js"></script>
-<script>
+<script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
   var htmlStr = [
     '<span class = "label label-default">Default</span>'
   ].join('\n').replace(/\</g, '&lt;');
   $('#code').html(htmlStr);
   hljs.highlightBlock($('#code')[0]);
-</script>
-<script>
-  //$('.alert').alert();
 </script>
 </body>
 </html>
