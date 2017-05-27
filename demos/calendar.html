@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
     <style>
-        #code {
+        .code {
             background-color: #eee;
+        }
+        .code-type {
+            margin: 0;
         }
     </style>
 </head>
@@ -22,9 +25,19 @@
 <p class="code-example">code:</p>
 <div>
       <pre>
-        <code id="code" className="js"></code>
+        <code id="code" class="code js"></code>
       </pre>
 </div>
+<p class="code-type">js</p>
+<pre>
+    <code id="js_code" class="code js">
+    &lt;script>
+    $(document).ready(function(e) {
+        $('.calendar').calendar('calendarRender');
+     });
+    &lt;/script>
+    </code>
+</pre>
 
 <script src="./lib/jquery.min.js"></script>
 <script src="./lib/highlight.min.js"></script>
@@ -35,11 +48,11 @@
         }
     );
     var htmlStr = [
-        '日历：<div class="calendar"></div>',
-        '<script src="../src/js/calendar.js"><script>'
+        '日历：<div class="calendar"></div>'
     ].join('\n').replace(/\</g, '&lt;');
     $('#code').html(htmlStr);
     hljs.highlightBlock($('#code')[0]);
+    hljs.highlightBlock($('#js_code')[0]);
 </script>
 </body>
 </html>
