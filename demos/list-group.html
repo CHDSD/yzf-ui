@@ -59,12 +59,16 @@
       hljs.highlightBlock($('#code')[0]);
     </script>
     <script language="javascript" type="text/javascript">
-      $(document).ready(function(){
-        $(".header").click(function(){
-            $("#panel").slideToggle();
-            $(".img").toggleClass("active"); 
-        });
-    });
+      // $(document).ready(function(){
+      //   $(".header").click(function(){
+      //       $("#panel").slideToggle();
+      //       $(".img").toggleClass("active"); 
+      //   });
+      // });
+      $('.header').on('click', function () {
+        $('.panel').panel('toggle');
+      });
+      
     </script>
     
   </body>
