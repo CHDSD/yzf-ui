@@ -21,11 +21,9 @@ const Calendar = (($) => {
     let curTime = new Date();
     let viewTime = new Date();
     let curView = 'month';
-    //let showItem = false;
-    //let tools;
+    let showItem = false;
     class Calendar {
         constructor(element){
-            console.log('element',element);
             this._element = element;
         }
         // 获取日历视图
@@ -42,6 +40,8 @@ const Calendar = (($) => {
         calendarRender(){
             let items = this.getView();
             let parentsInfo = this.getParentsInfo();
+            let show = showItem ? 'block' :'none';
+            showItem = true;
             let calendarHtml =
                 '<div class="ipt-box">' +
                 '<input type="text" readOnly={true}/>' +
@@ -56,6 +56,7 @@ const Calendar = (($) => {
                 '</div>';
             $(this._element).html(calendarHtml);
             $(this._element).children('.ipt-box').children('input').val(selTimeStr);
+            $(this._element).children('.item-box').css('display',show);
         }
         //月视图组件，显示一个月中的天
         monthRender() {
@@ -399,6 +400,20 @@ const Calendar = (($) => {
 
     }
 
+    // 阻止点击事件冒泡
+    $(document).on(
+        'click',
+        '.calendar',
+        function (e) {
+            e.stopPropagation();
+        }
+    );
+
+    //点击其他区域隐藏日历
+    $(document).bind('click',function(){
+        $('.calendar').children('.item-box').css('display','none');
+    });
+
     $(document).on(
         'click',
         '.calendar .pre-view',
@@ -423,13 +438,13 @@ const Calendar = (($) => {
         }
     );
 
-    //$(document).on(
-    //    'click',
-    //    '.calendar .ipt-box',
-    //    function (e) {
-    //        Calendar._jQueryInterface.call($(this), 'toggle');
-    //    }
-    //);
+    $(document).on(
+        'click',
+        '.calendar .ipt-box',
+        function (e) {
+            Calendar._jQueryInterface.call($(this), 'toggle');
+        }
+    );
 
     $(document).on(
         'click',
