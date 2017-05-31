@@ -6,6 +6,7 @@
     <title>Button</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
       #code {
         background-color: #eee;
@@ -17,25 +18,34 @@
   </head>
   <body>
 
+    <h3 class="comp-name">按钮</h3>
+    <p class="desc">
+      为<span class="hl-tip">&lt;a>, &lt;button>, &lt;input></span>等元素添加按钮类即可使用yzf-ui提供的样式。<br>
+      添加<span class="hl-tip">"btn btn-default"</span>类就可以应用默认的按钮样式。<br>
+      添加<span class="hl-tip">"btn btn-light"</span>类应用浅色按钮样式。<br>
+      添加<span class="hl-tip">"btn btn-pure"</span>类应用不带背景按钮样式。<br>
+      如果要不带圆角的按钮，只需要加上<span class="hl-tip">"btn-rect"</span>类。
+    </p>
+
     <div class="group">
       <button class="btn btn-default">button-default</button>
       <input type="button" class="btn btn-default" value="button-default">
-      <span class="btn btn-default">button-default</span>
-      <a class="btn btn-default">button-default</a>
+      <span class="btn btn-default btn-rect">button-default</span>
+      <a class="btn btn-default btn-rect">button-default</a>
       <br><br>
       <button class="btn btn-light">button-light</button>
       <input type="button" class="btn btn-light" value="button-light">
-      <span class="btn btn-light">button-light</span>
-      <a class="btn btn-light">button-light</a>
+      <span class="btn btn-light btn-rect">button-light</span>
+      <a class="btn btn-light btn-rect">button-light</a>
       <br><br>
       <button class="btn btn-pure">button-pure</button>
       <input type="button" class="btn btn-pure" value="button-pure">
-      <span class="btn btn-pure">button-pure</span>
-      <a class="btn btn-pure">button-pure</a>
+      <span class="btn btn-pure btn-rect">button-pure</span>
+      <a class="btn btn-pure btn-rect">button-pure</a>
     </div>
 
     <p class="code-example">code:</p>
-    <div>
+    <div class="code">
       <pre>
         <code id="code" class="html"></code>
       </pre>
@@ -48,18 +58,18 @@
       var htmlStr = [
         '<button class="btn btn-default">button-default</button>',
         '<input type="button" class="btn btn-default" value="button-default">',
-        '<span class="btn btn-default">button-default</span>',
-        '<a class="btn btn-default">button-default</a>',
+        '<span class="btn btn-default btn-rect">button-default</span>',
+        '<a class="btn btn-default btn-rect">button-default</a>',
         '<br><br>',
         '<button class="btn btn-light">button-light</button>',
         '<input type="button" class="btn btn-light" value="button-light">',
-        '<span class="btn btn-light">button-light</span>',
-        '<a class="btn btn-light">button-light</a>',
+        '<span class="btn btn-light btn-rect">button-light</span>',
+        '<a class="btn btn-light btn-rect">button-light</a>',
         '<br><br>',
         '<button class="btn btn-pure">button-pure</button>',
         '<input type="button" class="btn btn-pure" value="button-pure">',
-        '<span class="btn btn-pure">button-pure</span>',
-        '<a class="btn btn-pure">button-pure</a>'
+        '<span class="btn btn-pure btn-rect">button-pure</span>',
+        '<a class="btn btn-pure btn-rect">button-pure</a>'
       ].join('\n').replace(/\</g, '&lt;');
       $('#code').html(htmlStr);
       hljs.highlightBlock($('#code')[0]);
