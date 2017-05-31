@@ -6,6 +6,7 @@
     <title>processBar</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
         #code {
             background-color: #eee;
@@ -13,12 +14,23 @@
     </style>
 </head>
 <body>
+    <h3 class="comp-name">进度条</h3>
+    <p class="desc">
+        为外层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress"</span>类，内层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress-bar"</span>类
+        即可使用yzf-ui提供的默认进度条样式。<br>
+        通过设置内层<span class="hl-tip"> &lt;div></span>元素的<span class="hl-tip">width,height</span>才决定进度条的长度,宽度。<br>
+        为内层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress-bar bg-success"</span>类应用绿色（成功）样式。<br>
+        为内层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress-bar bg-info"</span>类应用浅蓝色（信息）样式。<br>
+        为内层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress-bar bg-warning"</span>类应用橙色（警告）样式。<br>
+        为内层<span class="hl-tip"> &lt;div></span>元素添加<span class="hl-tip">"progress-bar bg-danger"</span>类应用大红色（危险）样式。<br>
+        若想在一个进度条叠加多个进度，只需在外层<span class="hl-tip"> &lt;div></span>元素里添加多个子<span class="hl-tip"> &lt;div></span>元素，并应用不同颜色样式即可。<br>
+    </p>
     <div class="p_example" style="width: 60%">
         <div class="progress">
-            <div class="progress-bar"  style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="progress-bar"  style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
         <div class="progress">
-            <div class="progress-bar"  style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+            <div class="progress-bar"  style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
         </div>
         <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 25%; height: 1px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
