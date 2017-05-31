@@ -22,7 +22,7 @@ const Alert = (($) => {
     }
 
     config(config) {
-      this._config = $.extends({}, this._config, config);
+      this._config = $.extend({}, this._config, config);
     }
 
     hide() {

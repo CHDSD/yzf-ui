@@ -6,6 +6,7 @@
     <title>Alert</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
       #code {
         background-color: #eee;
@@ -13,6 +14,15 @@
     </style>
   </head>
   <body>
+
+    <h3 class="comp-name">警告框</h3>
+    <p class="desc">
+      通过在jquery对象上调用alert(method)，(例如: <span class="hl-tip">$('.alert').alert('show')</span>)来操作警告弹框。<br>
+      支持的method有: <br>
+      <span class="hl-tip">config</span> 修改警告框配置，可以传入点击确定或取消的回调。$el.alert('config', {succ: func, fail: func}) <br>
+      <span class="hl-tip">show</span> 手动控制显示弹框。$el.alert('show')<br>
+      <span class="hl-tip">hide</span> 手动控制隐藏弹框。$el.alert('hide')<br>
+    </p>
 
     <div style="margin: 10px;">
       <button class="btn btn-default show-alert">show alert</button>
@@ -31,7 +41,7 @@
     </div>
 
     <p class="code-example">code:</p>
-    <div>
+    <div class="code">
       <pre>
         <code id="code" class="html"></code>
       </pre>

@@ -6,6 +6,7 @@
     <title>Tooltip</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
       .test-tooltip {
         display: inline-block;
@@ -20,6 +21,13 @@
   </head>
   <body>
 
+    <h3 class="comp-name">tooltip</h3>
+    <p class="desc">
+      通过给元素添加<span class="hl-tip">data-toggle="tooltip"</span>属性来激活tooltip。<br>
+      弹框中显示的文本由元素上的<span class="hl-tip">data-original-title="tooltip text"</span>属性指定。<br>
+      tooltip框放置的位置是自动计算的，也可以通过<span class="hl-tip">data-placement</span>属性来指定放置的位置。可以传入的值有<span class="hl-tip">top, right, bottom, left</span>。
+    </p>
+
     <div style="margin: 10px 20px;">
       <span class="test-tooltip" data-toggle="tooltip" data-original-title="tooltip text">test-tooltip</span>
       <span class="test-tooltip" data-toggle="tooltip" data-placement="bottom"data-original-title="tooltip text">test-tooltip</span>
@@ -30,7 +38,7 @@
     </div>
 
     <p class="code-example">code:</p>
-    <div>
+    <div class="code">
       <pre>
         <code id="code" class="html"></code>
       </pre>

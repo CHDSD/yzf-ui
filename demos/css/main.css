@@ -31,15 +31,45 @@
 	background: #0ac55d;
 }
 .container {
-	width: 1024px;
+	width: 1280px;
 	margin: 0 auto;
 	padding: 5px 0 25px 0;
+	position: relative;
+}
+.main-content {
+	width: 1024px;
+	float: left;
+}
+.side-menu {
+	width: 250px;
+	float: right;
+}
+.nav-links {
+	box-sizing: border-box;
+	width: 250px;
+	padding-left: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	list-style: none;
+	background-color: #efefef;
+	overflow: auto;
+}
+.fixed > .nav-links {
+	position: fixed;
+	top: 25px;
+}
+.nav-link {
+	text-decoration: none;
+	color: #666;
+}
+.nav-link:hover {
+	color: #222;
 }
 .block-title {
 	margin: 20px 0 10px 0;
 }
 .comp-title {
-	margin: 20px 0 10px 0;
+	margin: 50px 0 10px 0;
 }
 .doc-link {
 	color: #0366d6;
