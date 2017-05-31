@@ -27,6 +27,9 @@ $btn-light-bg-color: lighten($btn-bg-color, 20%);
   	outline: 0;
   }
 }
+.btn-rect {
+	border-radius: 0;
+}
 
 .btn-default {
 	@include button-variant($btn-text-color, $btn-bg-color, darken($btn-bg-color, 10%));

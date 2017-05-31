@@ -4,13 +4,13 @@ $text-color: #5b5b5b;
 //浅色字体颜色
 $text-light-color: #fff;
 //主题颜色
-$main-color: #6c6;
+$main-color: #0ac55d;
 //主题次要颜色
-$sec-color: #8e8;
+$sec-color: lighten($main-color, 10%);
 //背景颜色
 $bg-color: #777;
 $font-color:#5b5b5b;
-$font-color-bule:#6c6;
+$font-color-bule:#0ac55d;
 $border-color:#cdcdcd;
 $main-light-color: #E0EEFD;
 //普通边框颜色

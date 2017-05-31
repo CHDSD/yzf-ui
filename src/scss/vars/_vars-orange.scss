@@ -6,7 +6,7 @@ $text-light-color: #fff;
 //主题颜色
 $main-color: #f70;
 //主题次要颜色
-$sec-color: #f92;
+$sec-color: lighten($main-color, 10%);
 //背景颜色
 $bg-color: #777;
 $font-color:#5b5b5b;
