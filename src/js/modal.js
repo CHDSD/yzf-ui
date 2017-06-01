@@ -17,7 +17,7 @@ const Modal = (($) => {
         }
 
         config(config) {
-            this._config = $.extends({}, this._config, config);
+            this._config = $.extend({}, this._config, config);
         }
 
         hide() {
@@ -26,12 +26,12 @@ const Modal = (($) => {
 
         ok() {
             this.hide();
-            this._config['succ'] && this._config['succ']();
+            this._config['confirm'] && this._config['confirm'](this._element);
         }
 
         cancel() {
             this.hide();
-            this._config['fail'] && this._config['fail']();
+            this._config['cancel'] && this._config['cancel'](this._element);
         }
 
         static _jQueryInterface(config) {

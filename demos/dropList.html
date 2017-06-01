@@ -6,19 +6,24 @@
     <title>dropList</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
-        .code-type {
-            margin: 0;
-        }
         .code {
             background-color: #eee;
+            margin:0;
         }
     </style>
 </head>
 <body>
-<br/>
+<h3 class="comp-name">下拉框</h3>
+<p class="desc">
+    应用下拉框样式需首先添加<span class="hl-tip">&lt;div class="drop-list">&lt;/div></span><br>
+    下拉框值需添加drop-data类<span class="hl-tip">&lt;div class="drop-data">&lt;/div></span>。<br>
+    下拉框列表需添加drop-option类<span class="hl-tip">&lt;div class="drop-option">&lt;/div></span>。<br>
+    需要小下拉框的需添加drop-list-small类<span class="hl-tip">&lt;div class="drop-list drop-list-small">&lt;/div></span><br>
+    <span class="hl-tip">toggle</span>手动控制下拉框列表隐藏显示，$el.droplist('toggle')。
+</p>
 <div style="margin-left: 20px">
-
     <span style="display: inline-block;vertical-align: top;height: 34px;line-height: 34px;">下拉框 one：</span>
     <div class="drop-list drop-list-small">
         <div class="drop-data">
@@ -46,22 +51,23 @@
             <li>选项四</li>
         </ul>
     </div>
-</div>
-
-<p class="code-example">code:</p>
-<pre>
-    <code id="code" class="code js"></code>
-</pre>
-<p class="code-type">js</p>
-<pre>
-    <code id="js_code" class="code js">
-        &lt;script>
+    <p>code:</p>
+    <pre>
+        <code id="code" class="code js"></code>
+    </pre>
+    <p>js</p>
+    <pre>
+        <code id="js_code" class="code js">
+            &lt;script>
             $('.drop-list').on('click',function(){
                 $(this).droplist('toggle');
             });
-        &lt;/script>
-    </code>
-</pre>
+            &lt;/script>
+        </code>
+    </pre>
+</div>
+
+
 
 
 <script src="./lib/jquery.min.js"></script>
