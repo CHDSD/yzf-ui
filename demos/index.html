@@ -495,22 +495,22 @@
             <div class="menu">
               <ul class="nav in" id="side-menu">
                 <li>
-                  <a href="#">一级菜单</a>
+                  <a href="javascript:void(0);">一级菜单</a>
                   <ul class="nav nav-second-level">
                     <li>
-                      <a href="#">二级菜单</a>
+                      <a href="javascript:void(0);">二级菜单</a>
                     </li>
                     <li>
-                      <a href="#">二级菜单</a>
+                      <a href="javascript:void(0);">二级菜单</a>
                     </li>
                     <li>
-                      <a href="#">二级菜单</a>
+                      <a href="javascript:void(0);">二级菜单</a>
                       <ul class="nav nav-third-level">
                         <li>
-                          <a href="#">三级菜单</a>
+                          <a href="javascript:void(0);">三级菜单</a>
                         </li>
                         <li>
-                          <a href="#">三级菜单</a>
+                          <a href="javascript:void(0);">三级菜单</a>
                         </li>
                       </ul>
                     </li>
@@ -564,7 +564,20 @@
             <a class="doc-link" _target="blank" href="pagination.html">(文档)</a>
           </h2>
           <div style="margin: 10px">
-            <ul class="pagination" id="pagination-example"></ul>
+            <div class="text-center">
+              <div style="margin:15px">
+                <label>总页数：
+                  <input id="totalPages"/>
+                </label>
+                <br/>
+                <label>当前页：
+                  <input id="currentPage"/>
+                </label>
+                <br/>
+                <input type="button" id="ok" value="确定">
+              </div>
+              <div class="pagination-example pagination"></div>
+            </div>
           </div>
 
           <!-- tree -->
@@ -679,10 +692,21 @@
       //tabs
 
       //pagination
-      $('#pagination-example').yzfPagination({
-          totalPages: 35,
-          visiblePages: 10
-      });
+      $("#ok").click(
+          function(){
+            var totalPages=Number($("#totalPages").val());
+            var currentPage=Number($("#currentPage").val());
+            var shownum=Number($("#shownum").val());
+
+            $('.pagination').createPage(function(n){
+                  console.log(n);
+                },{
+                  pageCount:totalPages,//总页码,默认10
+                  current:currentPage,
+                }
+            );
+          }
+      );
 
       //tree
       function getTree() {

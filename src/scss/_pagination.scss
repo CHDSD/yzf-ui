@@ -3,51 +3,44 @@ $pagination-main-color: $main-color;
 $pagination-light-bg-color: lighten($btn-bg-color, 20%);
 $pagination-border-color:$main-border-color;
 
-
-.pagination {
+.pagination{
+  text-align: center;
+  color: #999999;
+  a{
+    text-decoration: none;
+    margin:0 15px;
+    color: #999999;
+  }
+  span,a{
     display: inline-block;
-    padding-left: 0;
-    margin: 20px 0;
-    border-radius: 4px;
-    >li{
-      display: inline;
-    }
-    > li > a {
-      position: relative;
-      float: left;
-      padding: 6px 12px;
-      margin-left: -1px;
-      text-decoration: none;
-      color:$pagination-main-color;
-      background-color: #ffffff;
-    }
-    > li:first-child > a {
-      margin-left: 0;
-      border-bottom-left-radius: 4px;
-      border-top-left-radius: 4px;
-    }
-    > li:last-child > a {
-      border-top-right-radius: 4px;
-      border-bottom-right-radius: 4px;
-    }
-    > li > a:hover{
-      background-color: #eeeeee;
-    }
+    box-sizing: border-box;
+  }
+  span.disabled{
+    height: 35px;
+    width: 65px;
+    line-height: 35px;
+    cursor: not-allowed;
+    margin: 0 5px;
+  }
+  .current{
+    color: #ffffff;
+    background:$pagination-main-color;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 5px;
+  }
+  input{
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    box-sizing: border-box;
 
-    > .active > a,
-    > .active > a:hover{
-      z-index: 2;
-      color: $pagination-text-color;
-      cursor: default;
-      background-color: $pagination-main-color;
-      border-color: $pagination-main-color;
-    }
-
-    > .disabled > a,
-    > .disabled > a:hover{
-      color: #999999;
-      cursor: not-allowed;
-      background-color: #ffffff;
-      border-color: $pagination-border-color;
-    }
+  }
 }
+
+
+
+
+
+
