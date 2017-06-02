@@ -97,6 +97,17 @@
   ].join('\n').replace(/\</g, '&lt;');
   $('#code').html(htmlStr);
   hljs.highlightBlock($('#code')[0]);
+
+  var oBtn=$("ul.nav-tabs li");
+  for(var i=0;i<oBtn.length;i++) {
+    oBtn[i].onclick=function(ev){
+      var thisId=$(".tabs");
+      console.log(thisId.offset().top);
+      document.documentElement.scrollTop=thisId.offset().top+thisId.scrollTop();
+      ev.preventDefault();
+    }
+  }
+
 </script>
 </body>
 </html>

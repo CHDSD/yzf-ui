@@ -690,6 +690,15 @@
       $("#side-menu").menu();
 
       //tabs
+      var oBtn=$("ul.nav-tabs li");
+      for(var i=0;i<oBtn.length;i++) {
+        oBtn[i].onclick=function(ev){
+          var thisId=$(".tabs");
+          console.log(thisId.offset().top);
+          document.documentElement.scrollTop=thisId.offset().top+thisId.scrollTop();
+          ev.preventDefault();
+        }
+      }
 
       //pagination
       $("#ok").click(
