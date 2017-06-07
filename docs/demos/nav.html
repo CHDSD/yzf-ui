@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>nav</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <h3 class="comp-name">导航</h3>
+    <p class="desc">
+      导航组件，用于导航。
+    </p>
+
+    <div class="-nav">
+      <ul class="nav"> 
+      <!-- <li><img src="../dist/image/logo02.png"/></li> -->
+      <li><div class="logo">云账房·中心</div></li>
+      <li><a href="javascript:void(0)" class="nava ac">首页</a></li> 
+      <li><a href="javascript:void(0)" class="nava">产品体验</a></li> 
+      <li><a href="javascript:void(0)" class="nava">加入账房</a></li> 
+      <li><a href="javascript:void(0)" class="nava">关于我们</a></li> 
+      </ul> 
+    </div>
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script language="javascript" type="text/javascript">
+      var htmlStr = [
+      '<ul class="nav">', 
+      '  <li><div class="logo">云账房·中心</div></li>',
+      '  <li><a href="javascript:void(0)" class="nava ac">首页</a></li>', 
+      '  <li><a href="javascript:void(0)" class="nava">产品体验</a></li>', 
+      '  <li><a href="javascript:void(0)" class="nava">加入账房</a></li>', 
+      '  <li><a href="javascript:void(0)" class="nava">关于我们</a></li>', 
+      '</ul>', 
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+  
+     $(".nava").each(function(index){
+        $(this).click(function(){ 
+          $(".nava").eq(index).nava("toggle");
+        });
+      });
+      
+    </script>
+    
+  </body>
+</html>

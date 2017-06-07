@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>navbar</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <style>
+      #code {
+        background-color: #eee;
+      }
+      .group {
+        margin: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h3 class="comp-name">导航条</h3>
+    <p class="desc">
+      导航条组件，用于导航。
+    </p>
+
+    <div class="-navbar">
+      <div class="uul">
+        <ul class="navbar"> 
+        <li><a href="javascript:void(0)" class="navbara ac">首页</a></li> 
+        <li><a href="javascript:void(0)" class="navbara">当前订单</a></li> 
+        <li><a href="javascript:void(0)" class="navbara">历史订单</a></li>      
+        </ul>
+      </div>  
+      <div class="search-box">
+        <input type="text" class="search-text" placeholder="搜索">
+        <span class="search-btn"></span>
+      </div>   
+    </div> 
+
+    <p class="code-example">code:</p>
+    <div>
+      <pre>
+        <code id="code" class="html"></code>
+      </pre>
+    </div>
+
+    <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/highlight.min.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script language="javascript" type="text/javascript">
+      var htmlStr = [
+      '<div class="-navbar">',
+      '  <div class="uul">',
+      '    <ul class="navbar">', 
+      '      <li><a href="javascript:void(0)" class="navbara ac">首页</a></li>', 
+      '      <li><a href="javascript:void(0)" class="navbara">当前订单</a></li>', 
+      '      <li><a href="javascript:void(0)" class="navbara">历史订单</a></li>',      
+      '    </ul>',
+      '  </div>',  
+      '  <div class="search-box">',
+      '    <input type="text" class="search-text" placeholder="搜索">',
+      '    <span class="search-btn"></span>',
+      '  </div>',   
+      '</div>', 
+      ].join('\n').replace(/\</g, '&lt;');
+      $('#code').html(htmlStr);
+      hljs.highlightBlock($('#code')[0]);
+
+      $(".navbara").each(function(index){
+        $(this).click(function(){ 
+          $(".navbara").eq(index).navbara("toggle");
+        });
+      });
+    </script>
+    
+  </body>
+</html>

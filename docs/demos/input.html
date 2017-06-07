@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Input</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
+    <style>
+        #code {
+            background-color: #eee;
+        }
+
+    </style>
+</head>
+<body>
+<h3 class="comp-name">输入框&输入框组</h3>
+<p class="desc">
+    为<span class="hl-tip"> &lt;input></span>元素添加输入框类即可使用yzf-ui提供的样式。<br>
+    添加<span class="hl-tip">"yzf_input"</span>类就可以应用默认的输入框样式。<br>
+    <br>
+    为输入框组外层<span class="hl-tip"> &lt;div></span>元素添加输入框组类即可使用yzf-ui提供的样式。<br>
+    添加<span class="hl-tip">"yzf-input-group"</span>类就可以应用默认的输入框组样式<br>
+    再添加<span class="hl-tip">"input-group-lg"</span>类，应用大号输入框组样式<br>
+    添加<span class="hl-tip">"input-group-sl"</span>类，应用小号输入框组样式<br>
+
+
+</p>
+<div style="margin: 20px;float: left;width: 25%;">
+    <p>输入框：</p>
+    <input type="text" class="yzf_input" placeholder="请输入姓名" >
+</div>
+<div style="margin: 20px;float: left;width: 68%">
+    <p>输入框组：</p>
+    <div class="yzf-input-group input-group-lg" >
+        <span class="input_title">类别：</span>
+        <input type="text" class="yzf_input" placeholder="大号输入框" >
+    </div>
+    <div class="yzf-input-group " >
+        <span class="input_title">尺寸类别：</span>
+        <input type="text" class="yzf_input" placeholder="中号输入框" >
+    </div>
+    <div class="yzf-input-group input-group-sl" >
+        <span class="input_title">尺寸大小：</span>
+        <input type="text" class="yzf_input" placeholder="小号号输入框" >
+    </div>
+</div>
+
+<p class="code-example">code:</p>
+<div>
+      <pre>
+        <code id="code" className="js"></code>
+      </pre>
+</div>
+
+
+
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
+<script>
+
+    var htmlStr = [
+        '<div style="margin: 20px;float: left;width: 25%;">',
+        '<p>输入框：</p>',
+        '<input type="text" class="yzf_input" placeholder="请输入姓名" >',
+        '</div>',
+        '<div style="margin: 20px;float: left;width: 68%">',
+        '<p>输入框组：</p>',
+        '<div class="yzf-input-group input-group-lg" >',
+        '<span class="input_title">类别：</span>',
+        '<input type="text" class="yzf_input" placeholder="大号输入框" >',
+        '</div>',
+        '<div class="yzf-input-group " >',
+        '<span class="input_title">尺寸类别：</span>',
+        '<input type="text" class="yzf_input" placeholder="中号输入框" >',
+        '</div>',
+        '<div class="yzf-input-group input-group-sl" >',
+        '<span class="input_title">尺寸大小：</span>',
+        '<input type="text" class="yzf_input" placeholder="小号号输入框" >',
+        '</div>',
+        '</div>',
+    ].join('\n').replace(/\</g, '&lt;');
+    $('#code').html(htmlStr);
+    hljs.highlightBlock($('#code')[0]);
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>dropList</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+        .code-type {
+            margin: 0;
+        }
+        .code {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+<br/>
+<div style="margin-left: 20px">
+
+    <span style="display: inline-block;vertical-align: top;height: 34px;line-height: 34px;">下拉框 one：</span>
+    <div class="drop-list drop-list-small">
+        <div class="drop-data">
+            <input class="input"/>
+            <span class="icon"></span>
+        </div>
+        <ul class="drop-option">
+            <li>本月</li>
+            <li>本周</li>
+            <li>今天</li>
+        </ul>
+    </div>
+    <br/>
+    <br/>
+    <span style="display: inline-block;vertical-align: top;height: 34px;line-height: 34px;">下拉框 two：</span>
+    <div class="drop-list">
+        <div class="drop-data">
+            <input class="input"/>
+            <span class="icon"></span>
+        </div>
+        <ul class="drop-option">
+            <li>选项一</li>
+            <li>选项二</li>
+            <li>选项三</li>
+            <li>选项四</li>
+        </ul>
+    </div>
+</div>
+
+<p class="code-example">code:</p>
+<pre>
+    <code id="code" class="code js"></code>
+</pre>
+<p class="code-type">js</p>
+<pre>
+    <code id="js_code" class="code js">
+        &lt;script>
+            $('.drop-list').on('click',function(){
+                $(this).droplist('toggle');
+            });
+        &lt;/script>
+    </code>
+</pre>
+
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
+<script>
+
+    $('.drop-list').on('click',function(){
+        $(this).droplist('toggle');
+    });
+
+    var htmlStr = [
+        '下拉框 One：',
+            '   <div class="drop-list drop-list-small">',
+            '           <div class="drop-data">',
+            '               <input class="input"/>',
+            '               <span class="icon"></span>',
+            '           </div>',
+            '           <ul class="drop-option">',
+            '               <li>选项一</li>',
+            '               <li>选项二</li>',
+            '               <li>选项三</li>',
+            '               <li>选项四</li>',
+            '           </ul>',
+            '   </div>',
+        '下拉框 Two：',
+        '   <div class="drop-list">',
+        '           <div class="drop-data">',
+        '               <input class="input"/>',
+        '               <span class="icon"></span>',
+        '           </div>',
+        '           <ul class="drop-option">',
+        '               <li>选项一</li>',
+        '               <li>选项二</li>',
+        '               <li>选项三</li>',
+        '               <li>选项四</li>',
+        '           </ul>',
+        '   </div>'
+    ].join('\n').replace(/\</g, '&lt;');
+    $('#code').html(htmlStr);
+    hljs.highlightBlock($('#code')[0]);
+    hljs.highlightBlock($('#js_code')[0]);
+</script>
+</body>
+</html>

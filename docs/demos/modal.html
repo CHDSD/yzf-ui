@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <style>
+        .code {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<div style="margin: 10px;">
+    <button class="btn btn-default show-modal" >show modal</button>
+</div>
+
+<div class="modal shade" id="modal">
+    <div class="modal-content">
+        <div class="modal-title">
+            <span>Title</span>
+            <span class="yzf-icon yzf-icon-close modal-close"></span>
+        </div>
+        <div class="modal-body">Modal Body</div>
+        <div class="modal-footer">
+            <button class="btn btn-light modal-cancel">取消</button>
+            <button class="btn btn-default modal-ok">确定</button>
+        </div>
+    </div>
+</div>
+
+<p class="code-example">code:</p>
+      <pre>
+        <code id="code" class="code"></code>
+      </pre>
+<p class="code-type">js</p>
+<pre>
+    <code id="js_code" class="code js">
+        &lt;script>
+        $('.show-modal').on('click', function () {
+            $('#modal').modal('show');
+        });
+        &lt;/script>
+    </code>
+</pre>
+
+<script src="./lib/jquery.min.js"></script>
+<script src="./lib/highlight.min.js"></script>
+<script src="../dist/js/yzf.js"></script>
+<script>
+    $('.show-modal').on('click', function () {
+        $('#modal').modal('show');
+    });
+
+    var htmlStr = [
+        '<div class="modal shade" id="modal">',
+        '   <div class="modal-content">',
+        '       <div class="modal-title">',
+        '           <span>Title</span>',
+        '           <span class="yzf-icon yzf-icon-close modal-close"></span>',
+        '       </div>',
+        '   <div class="modal-body">Modal Body</div>',
+        '       <div class="modal-footer">',
+        '           <button class="btn btn-light modal-cancel">取消</button>',
+        '           <button class="btn btn-default modal-ok">确定</button>',
+        '       </div>',
+        '   </div>',
+        '</div>'
+    ].join('\n').replace(/\</g, '&lt;');
+    $('#code').html(htmlStr);
+    hljs.highlightBlock($('#code')[0]);
+    hljs.highlightBlock($('#js_code')[0]);
+</script>
+</body>
+</html>

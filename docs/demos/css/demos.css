@@ -1,0 +1,22 @@
+.desc {
+	margin: 16px;
+	padding: 10px;
+	border: solid 1px #dfdfdf;
+}
+.hl-tip {
+	color: #c7254e;
+}
+.comp-name {
+	margin: 0 16px;
+	padding-top: 16px;
+	font-weight: normal;
+}
+.code {
+	margin: 0 16px 0 16px;
+}
+.code-example {
+	margin-left: 16px;
+}
+.code-type {
+	margin-left: 16px;
+}

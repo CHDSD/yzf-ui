@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.theme-bar {
+	height: 50px;
+	line-height: 50px;
+	background-color: #0269c2;
+}
+.themes {
+	float: right;
+	margin-right: 20px;
+}
+.theme-sw-btn {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #3996f5;
+	cursor: pointer;
+}
+.theme-sw-btn:hover {
+	border: solid 1px #dfdfdf;
+}
+.theme-sw-btn.red {
+	background: #f27267;
+}
+.theme-sw-btn.orange {
+	background: #f70;
+}
+.theme-sw-btn.green {
+	background: #0ac55d;
+}
+.container {
+	width: 1280px;
+	margin: 0 auto;
+	padding: 5px 0 25px 0;
+	position: relative;
+}
+.main-content {
+	width: 1024px;
+	float: left;
+}
+.side-menu {
+	width: 250px;
+	float: right;
+}
+.nav-links {
+	box-sizing: border-box;
+	width: 250px;
+	padding-left: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	list-style: none;
+	background-color: #efefef;
+	overflow: auto;
+}
+.fixed > .nav-links {
+	position: fixed;
+	top: 25px;
+}
+.nav-link {
+	text-decoration: none;
+	color: #666;
+}
+.nav-link:hover {
+	color: #222;
+}
+.block-title {
+	margin: 20px 0 10px 0;
+}
+.comp-title {
+	margin: 50px 0 10px 0;
+}
+.doc-link {
+	color: #0366d6;
+	font-size: 16px;
+	font-weight: normal;
+}
+.breadcrumbs-demo{
+	padding: 10px;
+	border: 1px solid #d8d8d8;
+}

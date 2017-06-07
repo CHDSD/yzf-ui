@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>yzf-ui</title>
+    <link rel="stylesheet" href="./lib/github-gist.css">
+    <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  <body>
+    <!-- nav -->
+    <div class="theme-bar">
+      <div class="themes">
+        <span class="theme-sw-btn default" data-theme="default"></span>
+        <span class="theme-sw-btn red" data-theme="red"></span>
+        <span class="theme-sw-btn orange" data-theme="orange"></span>
+        <span class="theme-sw-btn green" data-theme="green"></span>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="container">
+      <div class="side-menu">
+        <ul class="nav-links">
+          <li><a href="#button" class="nav-link">按钮</a></li>
+          <li><a href="#button_group" class="nav-link">按钮组</a></li>
+          <li><a href="#checkbox" class="nav-link">checkbox</a></li>          
+          <li><a href="#list-group" class="nav-link">列表组</a></li>          
+          <li><a href="#nav" class="nav-link">导航</a></li>          
+          <li><a href="#navbar" class="nav-link">导航条</a></li>          
+          <li><a href="#fileinput" class="nav-link">文件上传</a></li>
+          <li><a href="#button" class="nav-link">按钮</a></li>
+          <li><a href="#button_group" class="nav-link">按钮组</a></li>
+          <li><a href="#checkbox" class="nav-link">checkbox</a></li>
+          <li><a href="#list-group" class="nav-link">列表组</a></li>
+          <li><a href="#nav" class="nav-link">导航</a></li>
+          <li><a href="#navbar" class="nav-link">导航条</a></li>
+          <li><a href="#fileinput" class="nav-link">文件上传</a></li>
+          <li><a href="#alert" class="nav-link">警告框</a></li>
+          <li><a href="#tooltip" class="nav-link">工具提示</a></li>
+          <li><a href="#edit_box" class="nav-link">编辑框</a></li>
+          <li><a href="#breadcrumbs" class="nav-link">路径导航</a></li>
+          <li><a href="#tables" class="nav-link">表格</a></li>
+          <li><a href="#modal" class="nav-link">模态弹框</a></li>
+          <li><a href="#droplist" class="nav-link">下拉框</a></li>
+          <li><a href="#calendar" class="nav-link">日历</a></li>
+          <li><a href="#input" class="nav-link">输入框&amp;输入框组</a></li>
+          <li><a href="#progress-bar" class="nav-link">进度条</a></li>
+          <li><a href="#radio" class="nav-link">单选框</a></li>
+          <li><a href="#label" class="nav-link">标签</a></li>
+          <li><a href="#menu" class="nav-link">菜单</a></li>
+          <li><a href="#tabs" class="nav-link">选项卡</a></li>
+          <li><a href="#pagination" class="nav-link">分页</a></li>
+          <li><a href="#tree_struct" class="nav-link">树结构</a></li>
+        </ul>
+      </div>
+
+      <div class="main-content">
+
+        <h1 id="overview" class="block-title anchored">概览</h1>
+        <p>云帐房风格组件列表。主要是css，部分组件交互效果依赖jquery实现。如果使用react，vue，angular等框架时，如果不想引入jquery，可以只引入css，在视图渲染时自己控制组件的dom结构。</p>
+
+        <h1 id="components" class="block-title anchored">组件列表</h1>
+
+        <!-- button -->
+        <h2 id="button" class="comp-title anchored">
+          <span>按钮</span>
+          <a class="doc-link" _target="blank" href="button.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+          <button class="btn btn-default">button-default</button>
+          <input type="button" class="btn btn-default" value="button-default">
+          <span class="btn btn-default btn-rect">button-default</span>
+          <a class="btn btn-default btn-rect">button-default</a>
+          <br><br>
+          <button class="btn btn-light">button-light</button>
+          <input type="button" class="btn btn-light" value="button-light">
+          <span class="btn btn-light btn-rect">button-light</span>
+          <a class="btn btn-light btn-rect">button-light</a>
+          <br><br>
+          <button class="btn btn-pure">button-pure</button>
+          <input type="button" class="btn btn-pure" value="button-pure">
+          <span class="btn btn-pure btn-rect">button-pure</span>
+          <a class="btn btn-pure btn-rect">button-pure</a>
+        </div>
+
+        <!-- button group -->
+        <h2 id="button_group" class="comp-title anchored">
+          <span>按钮组</span>
+          <a class="doc-link" _target="blank" href="buttonGroup.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+          <div class="btn-group">
+            <button class="btn btn-default">button-default</button>
+            <input type="button" class="btn btn-default" value="button-default">
+            <span class="btn btn-default">button-default</span>
+            <a class="btn btn-default">button-default</a>  
+          </div>
+          <br><br>      
+          <div class="btn-group">
+            <button class="btn btn-light">button-light</button>
+            <input type="button" class="btn btn-light" value="button-light">
+            <span class="btn btn-light">button-light</span>
+            <a class="btn btn-light">button-light</a>
+          </div>
+          <br><br>
+          <div class="btn-group">
+            <button class="btn btn-pure">button-pure</button>
+            <input type="button" class="btn btn-pure" value="button-pure">
+            <span class="btn btn-pure">button-pure</span>
+            <a class="btn btn-pure">button-pure</a>
+          </div>
+        </div>
+        
+        <!-- checkbox -->
+        <h2 id="checkbox" class="comp-title anchored">
+          <span>checkbox</span>
+          <a class="doc-link" _target="blank" href="checkbox.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+            <div class="-checkbox" style="margin: 10px;">
+              <label><div class="i-check value ">  
+              <input type="checkbox" name="category" class="category" value="选项一" />  
+              <label></label>  
+              </div> 选项一</label>
+            </div>
+
+            <div class="-checkbox" style="margin: 10px;">
+              <label><div class="i-check value fill">  
+              <input type="checkbox" name="category" class="category" value="选项一" />  
+              <label></label>  
+              </div> 选项一</label>
+            </div>
+        </div>
+
+        <!-- list-group -->
+        <h2 id="list-group" class="comp-title anchored">
+          <span>列表组</span>
+          <a class="doc-link" _target="blank" href="list-group.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+            <div class="-list-group" style="margin: 10px;">
+                <div class="header ">
+                    <span class="img title"></span>
+                    <span class="title span1">列表组头 <span style="color:#3F99F5"></span></span>
+                </div>
+                <div id="panel" class="panel">
+                   <div class="list-group-item">列表项一</div>
+                   <div class="list-group-item">列表项二</div>
+                   <div class="list-group-item">列表项三</div>
+                   <div class="list-group-item">列表项四</div>
+                   <div class="list-group-item">列表项五</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- nav -->
+        <h2 id="nav" class="comp-title anchored">
+          <span>导航</span>
+          <a class="doc-link" _target="blank" href="nav.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+            <div class="-nav">
+              <ul class="nav"> 
+              <li><div class="logo">云账房·中心</div></li>
+              <!-- <li><span class="img"></span></li> -->
+              <li><a href="javascript:void(0)" class="nava ac">首页</a></li>
+              <li><a href="javascript:void(0)" class="nava">产品体验</a></li>
+              <li><a href="javascript:void(0)" class="nava">加入账房</a></li>
+              <li><a href="javascript:void(0)" class="nava">关于我们</a></li>
+              </ul> 
+            </div>
+        </div>
+
+        <!-- navbar -->
+        <h2 id="navbar" class="comp-title anchored">
+          <span>导航条</span>
+          <a class="doc-link" _target="blank" href="navbar.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+            <div class="-navbar">
+              <div class="uul">
+                <ul class="navbar"> 
+                <li><a href="javascript:void(0)" class="navbara ac">首页</a></li>
+                <li><a href="javascript:void(0)" class="navbara">当前订单</a></li>
+                <li><a href="javascript:void(0)" class="navbara">历史订单</a></li>
+                </ul>
+              </div>  
+              <div class="search-box">
+                <input type="text" class="search-text" placeholder="搜索">
+                <span class="search-btn"></span>
+              </div>   
+            </div> 
+        </div>
+
+        <!-- fileinput -->
+        <h2 id="fileinput" class="comp-title anchored">
+          <span>文件上传</span>
+          <a class="doc-link" _target="blank" href="fileinput.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+            <div class="-fileinput" style="margin: 10px;">
+              <input class="file" type="button" value="选择文件"  />
+              <div class="content">
+                <img src="../dist/image/em1.jpg"/></img>
+                <img src="../dist/image/em2.jpg"/></img>
+                <img src="../dist/image/em3.jpg"/></img>
+              </div>
+            </div>
+        </div>
+
+        <!-- alert -->
+        <h2 id="alert" class="comp-title anchored">
+          <span>警告框</span>
+          <a class="doc-link" _target="blank" href="alert.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+          <button class="btn btn-default show-alert">点击弹出警告框</button>
+          <div class="alert">
+            <div class="box">
+              <p class="alert-title">冻结提示</p>
+              <span class="yzf-icon yzf-icon-close alert-close"></span>
+              <div class="content">请确认是否继续冻结所选择的所有元素？</div>
+              <div class="btns">
+                <button class="btn btn-light alert-cancel">取消</button>
+                <button class="btn btn-default alert-ok">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tooltip -->
+        <h2 id="tooltip" class="comp-title anchored">
+          <span>工具提示</span>
+          <a class="doc-link" _target="blank" href="tooltip.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+          <span class="btn btn-pure" data-toggle="tooltip" data-original-title="tooltip text">tooltip</span>
+          <span class="btn btn-pure" data-toggle="tooltip" data-placement="bottom" data-original-title="tooltip text">tooltip-bottom</span>
+          <span class="btn btn-pure" data-toggle="tooltip" data-placement="top" data-original-title="tooltip text">tooltip-top</span>
+          <span class="btn btn-pure" data-toggle="tooltip" data-placement="left" data-original-title="tooltip text">tooltip-left</span>
+        </div>
+
+        <!-- editBox -->
+        <h2 id="edit_box" class="comp-title anchored">
+          <span>编辑框</span>
+          <a class="doc-link" _target="blank" href="editBox.html">(文档)</a>
+        </h2>
+        <div class="comp-demo">
+          <button class="btn btn-default show-edit-box">点击弹出编辑框</button>
+
+          <div class="edit-box">
+            <div class="box">
+              <p class="edit-box-title">编辑票据模板</p>
+              <span class="yzf-icon yzf-icon-close edit-box-close"></span>
+              <div class="content">
+                <!-- 自定义输入项 -->
+                <div class="rows">模板编码: <input type="text" class="yzf_input"></div>
+                <div class="rows">模板名称: <input type="text" class="yzf_input"></div>
+                <!-- 自定义输入项 -->
+              </div>
+              <div class="btns">
+                <button class="btn btn-light edit-box-cancel">取消</button>
+                <button class="btn btn-default edit-box-ok">确定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- breadcrumbs -->
+        <h2 id="breadcrumbs" class="comp-title anchored">
+        <span>路径导航</span>
+        <a class="doc-link" _target="blank" href="breadcrumbs.html">(文档)</a>
+        </h2>
+        <div class="breadcrumbs-demo">
+          <ol class="breadcrumbs">
+            <li class="active">Home</li>
+          </ol>
+          <ol class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li class="active">Library</li>
+          </ol>
+          <ol class="breadcrumbs">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Library</a></li>
+            <li class="active">Data</li>
+          </ol>
+        </div>
+
+        <!-- tables -->
+        <h2 id="tables" class="comp-title anchored">
+          <span>表格</span>
+          <a class="doc-link" _target="blank" href="tabel.html">(文档)</a>
+        </h2>
+        <div>
+          <span>表格：</span>
+          <br/>
+          <div style="width: 800px">
+            <span>basic tabel</span>
+            <table class="table">
+              <thead>
+              <tr>
+                <th>序号</th>
+                <th>项目名称</th>
+                <th>楼栋</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>01</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              </tbody>
+            </table>
+            <br/>
+            <span>border tabel</span>
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>序号</th>
+                <th>项目名称</th>
+                <th>楼栋</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>01</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>成都新天地春天里</td>
+                <td>1楼</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- modal -->
+        <h2 id="modal" class="comp-title anchored">
+          <span>模态弹框</span>
+          <a class="doc-link" _target="blank" href="modal.html">(文档)</a>
+          </h2>
+          <button class="btn btn-default show-modal" >show modal</button>
+          <div class="modal shade" id="modal">
+            <div class="modal-content">
+              <div class="modal-title">
+                <span>Title</span>
+                <span class="yzf-icon yzf-icon-close modal-close"></span>
+              </div>
+              <div class="modal-body">Modal Body</div>
+              <div class="modal-footer">
+                <button class="btn btn-light modal-cancel">取消</button>
+                <button class="btn btn-default modal-ok">确定</button>
+              </div>
+            </div>
+          </div>
+
+        <!-- droplist -->
+        <h2 id="droplist" class="comp-title anchored">
+        <span>下拉框</span>
+        <a class="doc-link" _target="blank" href="droplist.html">(文档)</a>
+        </h2>
+        <p>下拉框 one</p>
+        <div class="drop-list drop-list-small">
+          <div class="drop-data">
+            <input class="input"/>
+            <span class="icon"></span>
+          </div>
+          <ul class="drop-option">
+            <li>本月</li>
+            <li>本周</li>
+            <li>今天</li>
+          </ul>
+        </div>
+        <br/>
+        <br/>
+        <p>下拉框 two</p>
+        <div class="drop-list">
+          <div class="drop-data">
+            <input class="input"/>
+            <span class="icon"></span>
+          </div>
+          <ul class="drop-option">
+            <li>选项一</li>
+            <li>选项二</li>
+            <li>选项三</li>
+            <li>选项四</li>
+          </ul>
+        </div>
+
+        <!-- calendar -->
+        <h2 id="calendar" class="comp-title anchored">
+        <span>日历</span>
+        <a class="doc-link" _target="blank" href="calendar.html">(文档)</a>
+        </h2>
+        <span>日历：</span>
+        <div class="calendar"></div>
+
+        <!-- input -->
+        <h2 id="input" class="comp-title anchored">
+            <span>输入框&输入框组</span>
+            <a class="doc-link" _target="blank" href="input.html">(文档)</a>
+        </h2>
+          <div >
+            <h4 style="margin-bottom: 10px">输入框：</h4>
+            <input type="text" class="yzf_input" placeholder="请输入姓名" >
+          </div>
+          <div >
+            <h4 style="margin: 10px 0;">输入框组：</h4>
+            <div class="yzf-input-group input-group-lg" >
+              <span class="input_title">类别：</span>
+              <input type="text" class="yzf_input" placeholder="大号输入框" >
+            </div>
+            <div class="yzf-input-group " >
+              <span class="input_title">尺寸类别：</span>
+              <input type="text" class="yzf_input" placeholder="中号输入框" >
+            </div>
+            <div class="yzf-input-group input-group-sl" >
+              <span class="input_title">尺寸大小：</span>
+              <input type="text" class="yzf_input" placeholder="小号号输入框" >
+            </div>
+          </div>
+
+          <!-- progress-bar -->
+          <h2 id="progress-bar" class="comp-title anchored">
+            <span>进度条</span>
+            <a class="doc-link" _target="blank" href="progressBar.html">(文档)</a>
+          </h2>
+          <div class="p_example" style="width: 60%">
+            <div class="progress">
+              <div class="progress-bar"  style="width: 75%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar"  style="width: 25%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">25%</div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 25%; height: 1px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-success"  style="width: 15%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-info"  style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-warning" style="width: 15%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="progress-bar bg-danger"  style="width: 10%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+
+          <!-- radio -->
+          <h2 id="radio" class="comp-title anchored">
+            <span>单选框</span>
+            <a class="doc-link" _target="blank" href="radio.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <input type="radio" class="yzf_radio" name="yzf_radio" id="check-1" hidden><label for="check-1">通过</label>
+            <input type="radio" class="yzf_radio" name="yzf_radio" id="check-2" hidden><label for="check-2" >未通过</label>
+          </div>
+
+          <!-- label -->
+          <h2 id="label" class="comp-title anchored">
+            <span>标签</span>
+            <a class="doc-link" _target="blank" href="label.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <span class="label label-default">Default</span>
+            <span class="label label-pure">Default</span>
+          </div>
+
+          <!-- menu -->
+          <h2 id="menu" class="comp-title anchored">
+            <span>菜单</span>
+            <a class="doc-link" _target="blank" href="menu.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <div class="menu">
+              <ul class="nav in" id="side-menu">
+                <li>
+                  <a href="#">一级菜单</a>
+                  <ul class="nav nav-second-level">
+                    <li>
+                      <a href="#">二级菜单</a>
+                    </li>
+                    <li>
+                      <a href="#">二级菜单</a>
+                    </li>
+                    <li>
+                      <a href="#">二级菜单</a>
+                      <ul class="nav nav-third-level">
+                        <li>
+                          <a href="#">三级菜单</a>
+                        </li>
+                        <li>
+                          <a href="#">三级菜单</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- tabs -->
+          <h2 id="tabs" class="comp-title anchored">
+            <span>选项卡</span>
+            <a class="doc-link" _target="blank" href="tabs.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <div class="tabs">
+              <ul class="nav-tabs">
+                <li class="active"><a style="margin-left:0px" href="#home" data-toggle="tab">Home</a>
+                </li>
+                <li><a href="#profile" data-toggle="tab">Profile</a>
+                </li>
+                <li><a href="#messages" data-toggle="tab">Messages</a>
+                </li>
+                <li><a href="#settings" data-toggle="tab">Settings</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="home">
+                  <h4>Home Tab</h4>
+                  <p>Home Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane fade" id="profile">
+                  <h4>Profile Tab</h4>
+                  <p>Profile Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane fade" id="messages">
+                  <h4>Messages Tab</h4>
+                  <p>Messages Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane fade" id="settings">
+                  <h4>Settings Tab</h4>
+                  <p>Settings Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- pagination -->
+          <h2 id="pagination" class="comp-title anchored">
+            <span>分页</span>
+            <a class="doc-link" _target="blank" href="pagination.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <ul class="pagination" id="pagination-example"></ul>
+          </div>
+
+          <!-- tree -->
+          <h2 id="tree_struct" class="comp-title anchored">
+            <span>树结构</span>
+            <a class="doc-link" _target="blank" href="tree.html">(文档)</a>
+          </h2>
+          <div style="margin: 10px">
+            <div class="tree">
+              <div>
+                <label for="input-search" class="sr-only"></label>
+                <input type="input" class="form-control" id="input-search" placeholder="输入要搜索的内容..." value="">
+                <button type="button" class="btn btn-default" id="btn-search">搜索</button>
+                <button type="button" class="btn btn-default" id="btn-clear-search">清空</button>
+              </div>
+              <div id="tree"></div>
+            </div>
+          </div>
+
+      </div>
+      <br style="clear: both;">
+    </div>
+
+    <script src="./lib/anchor.min.js"></script>
+    <script src="./lib/jquery-3.2.1.js"></script>
+    <script src="../dist/js/yzf.js"></script>
+    <script>
+      // 主题切换
+      $('.theme-bar .theme-sw-btn').on('click', function(e) {
+        var themeType = $(this).data('theme');
+        var cls = $(document.body)[0].className;
+        cls = cls.replace(/\s*yzf\-[A-Za-z]+/, '');
+        if (themeType != 'default') {
+          cls = cls + ' yzf-' + themeType;
+          var cssUrl = '../dist/css/yzf-'+themeType+'.css';
+          if($('.yzf-theme-link').length) {
+            $('.yzf-theme-link').attr('href', cssUrl);
+          } else {
+            $('head').append('<link class="yzf-theme-link" rel="stylesheet" href="'+cssUrl+'"/>');
+          }
+        } else {
+          $('.yzf-theme-link').remove();
+        }
+        $(document.body)[0].className = cls;
+      });
+
+      // 锚点
+      anchors.options = {
+        placement: 'left'
+      };
+      anchors.add('.anchored');
+
+      // 导航菜单
+      function measureScroll() {
+        var st = document.body.scrollTop;
+        console.log(st);
+        if (st > 50) {
+          $('.side-menu').addClass('fixed');
+        } else {
+          $('.side-menu').removeClass('fixed');
+        }
+      }
+      function resizeMenu() {
+        $('.side-menu .nav-links').css('max-height', $(window).height() - 55 + 'px');        
+      }
+      measureScroll();
+      resizeMenu();
+      $(window).on('scroll', measureScroll);
+      $(window).on('resize', resizeMenu);
+
+      // 警告框
+      $('.show-alert').on('click', function () {
+        $('.alert').alert('show');
+      });
+
+      // 工具提示
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // 编辑框
+      $('.edit-box').editBox('config', {
+        confirm: function(el) {
+          console.log('confirm', el);
+          // do something...
+        },
+        cancel: function (el) {
+          console.log('cancel', el);
+          // do something...
+        }
+      });
+      $('.show-edit-box').on('click', function () {
+        $('.edit-box').editBox('show');
+      });
+
+      //模态弹框
+      $('.show-modal').on('click', function () {
+        $('#modal').modal('show');
+      });
+
+      //下拉框
+      $('.drop-list').on('click',function(){
+        $(this).droplist('toggle');
+      });
+      // 日历
+      $(document).ready(function(e) {
+          $('.calendar').calendar('calendarRender');
+        }
+      );
+
+      //menue
+      $("#side-menu").menu();
+
+      //tabs
+
+      //pagination
+      $('#pagination-example').yzfPagination({
+          totalPages: 35,
+          visiblePages: 10
+      });
+
+      //tree
+      function getTree() {
+        var data = [
+          {
+            text: "Parent 1",
+            nodes: [
+              {
+                text: "Child 1",
+                nodes: [
+                  {
+                    text: "Grandchild 1"
+                  },
+                  {
+                    text: "Grandchild 2"
+                  }
+                ]
+              },
+              {
+                text: "Child 2"
+              }
+            ]
+          },
+          {
+            text: "Parent 2"
+          },
+          {
+            text: "Parent 3"
+          },
+          {
+            text: "Parent 4"
+          },
+          {
+            text: "Parent 5"
+          }
+        ];
+        return data;
+      }
+
+      var $searchableTree=$('#tree').treeview({data: getTree(),levels: 1});
+      var search = function(e) {
+        var pattern = $('#input-search').val();
+        var options = {
+          ignoreCase: true
+        };
+        var results = $searchableTree.treeview('search', [ pattern, options ]);
+
+        var output = '<p>' + results.length + ' matches found</p>';
+        $.each(results, function (index, result) {
+          output += '<p>- ' + result.text + '</p>';
+        });
+        $('#search-output').html(output);
+      }
+
+      $('#btn-search').on('click', search);
+      $('#input-search').on('keyup', search);
+
+      $('#btn-clear-search').on('click', function (e) {
+        $searchableTree.treeview('clearSearch');
+        $('#input-search').val('');
+        $('#search-output').html('');
+      });
+
+      //列表组
+      $('.header').on('click', function () {
+        $('.panel').panel('toggle');
+      });
+
+      //导航
+      $(".nava").each(function(index){
+        $(this).click(function(){
+          $(".nava").eq(index).nava("toggle");
+        });
+      });
+
+      //导航条
+      $(".navbara").each(function(index){
+        $(this).click(function(){
+          $(".navbara").eq(index).navbara("toggle");
+        });
+      });
+
+    </script>
+  </body>
+</html>
