@@ -945,7 +945,7 @@ input {
     vertical-align: top;
     border: #cdcdcd 1px solid;
     border-left: 0;
-    background: url(../../dist/image/drop.png) center no-repeat; }
+    background: url(../image/drop.png) center no-repeat; }
   .drop-list .drop-option {
     display: none;
     position: absolute;
@@ -987,7 +987,7 @@ input {
   display: inline-block;
   vertical-align: top;
   border: none;
-  background: url(../../dist/image/drop-small.png) center no-repeat; }
+  background: url(../image/drop-small.png) center no-repeat; }
 
 .drop-list-small .drop-option {
   width: 140px;

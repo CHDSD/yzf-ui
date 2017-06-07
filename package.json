@@ -5,6 +5,7 @@
   "main": "./dist/js/yzf.js",
   "scripts": {
     "dev": "gulp js sass js:watch sass:watch",
+    "build": "gulp js sass",
     "copy": "node ./build/copy.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
