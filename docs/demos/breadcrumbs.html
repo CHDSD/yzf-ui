@@ -6,6 +6,7 @@
     <title>Breadcrumbs</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
         #code {
             background-color: #eee;
@@ -13,8 +14,12 @@
     </style>
 </head>
 <body>
-
-<div>
+<h3 class="comp-name">路径导航</h3>
+<p class="desc">
+    为<span class="hl-tip">&lt;ol class="breadcrumbs">&lt;/ol></span>添加breadcrumbs类即可使用本样式<br>
+    当前选中的路径，添加active类<span class="hl-tip">&lt;li class="active">&lt;/li></span>。
+</p>
+<div style="margin:0 18px">
     <ol class="breadcrumbs">
         <li class="active">Home</li>
     </ol>
@@ -27,13 +32,12 @@
         <li><a href="#">Library</a></li>
         <li class="active">Data</li>
     </ol>
-</div>
-
-<p class="code-example">code:</p>
-<div>
+    <p>code</p>
+    <div>
       <pre>
         <code id="code" className="js"></code>
       </pre>
+    </div>
 </div>
 
 <script src="./lib/jquery.min.js"></script>

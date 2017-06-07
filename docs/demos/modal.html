@@ -6,6 +6,7 @@
     <title>Modal</title>
     <link rel="stylesheet" href="./lib/github-gist.css">
     <link rel="stylesheet" href="../dist/css/yzf.css">
+    <link rel="stylesheet" href="./css/demos.css">
     <style>
         .code {
             background-color: #eee;
@@ -13,7 +14,14 @@
     </style>
 </head>
 <body>
-
+<h3 class="comp-name">模态弹框</h3>
+<p class="desc">
+    模态弹框，通过在jquery对象上调用modal(method)，(例如: <span class="hl-tip">$('#modal').modal('show')</span>)来控制模态框。<br>
+    模态框支持的method有: <br>
+    <span class="hl-tip">config</span> 修改模态弹框配置，可以传入点击确定或取消的回调。$el.modal('config', {succ: func, fail: func}) 在回调中会将模态框的dom对象做为参数传入，可以在dom中查找表单元素，获取表单的值。<br>
+    <span class="hl-tip">show</span> 手动控制显示弹框。$el.modal('show')<br>
+    <span class="hl-tip">hide</span> 手动控制隐藏弹框。$el.modal('hide')<br>
+</p>
 <div style="margin: 10px;">
     <button class="btn btn-default show-modal" >show modal</button>
 </div>
@@ -40,6 +48,14 @@
 <pre>
     <code id="js_code" class="code js">
         &lt;script>
+        $('.modal').modal('config', {
+            confirm: function(el) {
+                console.log('confirm', el);
+            },
+            cancel: function (el) {
+                console.log('cancel', el);
+            }
+        });
         $('.show-modal').on('click', function () {
             $('#modal').modal('show');
         });
@@ -51,6 +67,14 @@
 <script src="./lib/highlight.min.js"></script>
 <script src="../dist/js/yzf.js"></script>
 <script>
+    $('.modal').modal('config', {
+        confirm: function(el) {
+            console.log('confirm', el);
+        },
+        cancel: function (el) {
+            console.log('cancel', el);
+        }
+    });
     $('.show-modal').on('click', function () {
         $('#modal').modal('show');
     });
