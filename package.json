@@ -1,6 +1,6 @@
 {
   "name": "yzf-ui",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "云帐房通用UI库，带主题切换",
   "main": "./dist/js/yzf.js",
   "scripts": {
